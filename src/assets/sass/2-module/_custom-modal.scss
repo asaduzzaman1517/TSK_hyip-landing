@@ -1,0 +1,10 @@
+.contact-card {
+    padding: 30px;
+    @include base-border;
+    border-radius: 5px;
+    @include base-bg(.25);
+    &__title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}

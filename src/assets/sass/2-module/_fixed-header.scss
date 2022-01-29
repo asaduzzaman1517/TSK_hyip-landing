@@ -1,0 +1,18 @@
+.fixed-header {
+    .header-top {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    .header-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        @include base-shadow(0, 15px, 30px, 0, .1);
+    }
+    .header--primary {
+        background: $accent-clr;
+    }
+}

@@ -1,0 +1,13 @@
+.custom--check {
+    border-radius: 1px !important;
+    border: 1px solid lighten($accent-clr, 15%);
+    background: lighten($accent-clr, 1%);
+    &:checked {
+        @include base-bg;
+        @include base-border(1px, .5);
+    }
+    &:focus {
+        @include base-border(1px, .5);
+        box-shadow: none;
+    }
+}

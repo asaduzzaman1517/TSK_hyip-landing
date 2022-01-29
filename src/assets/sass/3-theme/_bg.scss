@@ -1,0 +1,36 @@
+.bg--primary {
+  background: $primary;
+}
+.bg--secondary {
+  background: $secondary;
+}
+.bg--success {
+  background: $success;
+}
+.bg--danger {
+  background: $danger;
+}
+.bg--warning {
+  background: $warning;
+}
+.bg--info {
+  background: $info;
+}
+.bg--dark {
+  background: $dark;
+}
+.bg--light {
+  background: var(--white);
+}
+.bg--base {
+  @include base-bg;
+}
+.bg--accent {
+  background: $accent-clr;
+}
+.bg--accent-dark {
+  background: darken($accent-clr, 5%);
+}
+.bg--accent-light {
+  background: lighten($accent-clr, 8%);
+}

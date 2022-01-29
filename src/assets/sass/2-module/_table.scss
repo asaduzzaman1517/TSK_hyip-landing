@@ -1,0 +1,163 @@
+/* table css start */
+
+.custom--table {
+  margin-bottom: 0;
+  border-radius: 10px;
+  @include base-shadow(0, 5px, 15px, 0, .25);
+  background: $accent-clr;
+  & > :not(:first-child) {
+    @include base-border-top(1px, 1);
+  }
+  & > :not(caption) > * > * {
+    border-bottom-width: 0;
+  }
+  thead {
+    @include base-bg;
+
+    th {
+      padding: 0.75rem 1.25rem;
+      font-family: $heading-font;
+      color: var(--white);
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 500;
+      vertical-align: middle;
+
+      &:first-child {
+        border-radius: 10px 0 0 0;
+        text-align: left;
+      }
+
+      &:last-child {
+        border-radius: 0 10px 0 0;
+        text-align: right;
+      }
+    }
+  }
+
+  tbody {
+    td {
+      border-top: none;
+      @include base-border-bottom(1px, .3);
+      padding: 15px 20px;
+      font-family: $heading-font;
+      color: var(--white);
+      text-align: center;
+      vertical-align: middle;
+
+      &:first-child {
+        text-align: left;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+  [data-label] {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: attr(data-label);
+      font-weight: 500;
+      left: 0;
+      padding: 0.8125rem 0.9375rem;
+      display: none;
+      color: var(--white);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .table-responsive--md {
+    thead {
+      display: none;
+    }
+
+    tbody tr {
+      &:nth-child(odd) {
+        background-color: lighten($accent-clr, 5%);
+      }
+
+      &:last-child td {
+        @include base-border-top(1px .25);
+      }
+
+      td {
+        padding-right: 15px;
+
+        &:last-child {
+          padding-right: 15px;
+        }
+      }
+    }
+
+    tr {
+      th,
+      td {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-left: 45% !important;
+        text-align: right !important;
+      }
+
+      th:first-child,
+      td:first-child {
+        border-top: none !important;
+      }
+    }
+
+    [data-label]::before {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .table-responsive--sm {
+    thead {
+      display: none;
+    }
+
+    tbody tr {
+      &:nth-child(odd) {
+        background-color: lighten($accent-clr, 5%);
+      }
+
+      td {
+        padding-right: 15px;
+
+        &:last-child {
+          padding-right: 15px;
+        }
+      }
+    }
+
+    tr {
+      th,
+      td {
+        display: block;
+        padding-left: 45% !important;
+        text-align: right !important;
+        @include base-border-bottom(1px , .25);
+      }
+
+      th:first-child,
+      td:first-child {
+        border-top: none !important;
+      }
+    }
+
+    [data-label]::before {
+      display: block;
+    }
+  }
+}
+
+/* table css end */

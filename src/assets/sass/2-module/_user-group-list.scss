@@ -1,0 +1,8 @@
+.user-group-list {
+    li {
+        margin-right: -25px;
+        .user__img {
+            @include dark-shadow(0, 0, 8px, 0, .5);
+        }
+    }
+}

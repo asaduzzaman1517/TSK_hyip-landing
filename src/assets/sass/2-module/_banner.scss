@@ -1,0 +1,26 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  isolation: isolate;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to right, rgba($accent-clr, 0.9), rgba($accent-clr, 0.5));
+    mix-blend-mode: darken;
+    z-index: -1;
+  }
+  &__content {
+    padding-top: clamp(100px, 12vw, 160px);
+    padding-bottom: clamp(50px, 8vw, 80px);
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}

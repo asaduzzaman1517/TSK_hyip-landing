@@ -1,0 +1,28 @@
+.newsletter {
+    @include base-border(2px, 1);
+    padding: 5px;
+    max-width: 550px;
+    &__container {
+        display: flex;
+        padding: 5px;
+        background: var(--white);
+    }
+    
+    &__input {
+        background: transparent;
+        border: none;
+        color: $heading-clr;
+        font-size: 14px;
+        &:focus {
+            color: $heading-clr;
+            outline: none;
+            box-shadow: none;
+            border-color: transparent;
+            background-color: transparent;
+            border-width: 0;
+          }
+          &::placeholder {
+              color: $text-clr;
+          }
+    }
+}

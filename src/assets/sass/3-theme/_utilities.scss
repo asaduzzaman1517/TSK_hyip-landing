@@ -1,0 +1,47 @@
+.t-heading-font {
+  font-family: $heading-font;
+}
+.t-body-font {
+  font-family: $body-font;
+}
+
+.t-link {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:hover {
+    text-decoration: none;
+  }
+  &--primary {
+    &:hover {
+      color: $primary;
+    }
+  }
+  &--danger {
+    &:hover {
+      color: $danger;
+    }
+  }
+  &--info {
+    &:hover {
+      color: $info;
+    }
+  }
+  &--light {
+    &:hover {
+      color: var(--white);
+    }
+  }
+  &--base {
+    &:hover {
+      @include base-clr;
+    }
+  }
+  &--accent {
+    &:hover {
+      color: $accent-clr;
+    }
+  }
+}
+.t-short-para {
+  max-width: 55ch;
+}

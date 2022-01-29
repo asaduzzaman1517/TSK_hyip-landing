@@ -1,0 +1,26 @@
+.form--select {
+  height: 50px;
+  border-radius: 3px;
+  border-radius: 2px;
+  @include base-border;
+  @include base-bg;
+  color: var(--white);
+  &:focus {
+    @include base-border;
+    @include base-shadow(0, 3px, 6px, 0, 0.3);
+    @include base-bg;
+  }
+  &-sm {
+    border-radius: 3px;
+    border-radius: 2px;
+    @include base-border;
+    @include base-bg;
+    color: var(--white);
+    font-size: 0.875rem;
+    &:focus {
+      @include base-border;
+      @include base-shadow(0, 3px, 6px, 0, 0.3);
+      @include base-bg;
+    }
+  }
+}

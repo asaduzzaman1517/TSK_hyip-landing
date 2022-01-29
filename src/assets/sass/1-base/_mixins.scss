@@ -1,0 +1,157 @@
+//Media Breakpoint for Each Device
+
+//Extra Small Screen
+@mixin xxs-screen {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+//Extra Small Screen
+@mixin xs-screen {
+  @media screen and (min-width: 375px) {
+    @content;
+  }
+}
+
+//Iphone Plus
+@mixin iphn-plus {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
+//Iphone rotate
+@mixin iphn-screen {
+  @media screen and (min-width: 568px) {
+    @content;
+  }
+}
+//Small Screen (min-width: 576)
+@mixin sm-screen {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+//Medium Screen (min-width: 768)
+@mixin md-screen {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+//Large Screen (min-width: 992)
+@mixin lg-screen {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+//Xtra Large Screen (min-width: 1200)
+@mixin xl-screen {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+//Xtra Large Screen i (min-width: 1366)
+@mixin xli-screen {
+  @media screen and (min-width: 1366px) {
+    @content;
+  }
+}
+//Xtra Large Screen ii (min-width: 1400)
+@mixin xlii-screen {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+//Xtra Large Screen iii (min-width: 1440)
+@mixin xliii-screen {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+//Xtra Large Screen iv (min-width: 1600)
+@mixin xliv-screen {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}
+//Xtra Large Screen v (min-width: 1680)
+@mixin xlv-screen {
+  @media screen and (min-width: 1680px) {
+    @content;
+  }
+}
+//Xtra Large Screen xxl (min-width: 1920)
+@mixin xxl-screen {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
+// Color Flexibility
+@mixin base-clr($a: 1) {
+  color: rgba(var(--r), var(--g), var(--b), $a);
+}
+@mixin base-bg($a: 1) {
+  background-color: rgba(var(--r), var(--g), var(--b), $a);
+}
+// Shadows
+@mixin base-shadow($x: 0, $y: 0, $blurr: 0, $spread: 0, $a: 1) {
+  box-shadow: $x $y $blurr $spread rgba(var(--r), var(--g), var(--b), $a);
+}
+@mixin dark-shadow($x: 0, $y: 0, $blurr: 0, $spread: 0, $a: 1) {
+  box-shadow: $x $y $blurr $spread rgba(var(--dark-r), var(--dark-g), var(--dark-b), $a);
+}
+// Border
+@mixin base-border($width: 1px, $a: 1) {
+  border-width: $width;
+  border-style: solid;
+  border-color: rgba(var(--r), var(--g), var(--b), $a);
+}
+@mixin base-border-top($width: 1px, $a: 1) {
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: $width;
+  border-style: solid;
+  border-color: rgba(var(--r), var(--g), var(--b), $a);
+}
+@mixin base-border-start($width: 1px, $a: 1) {
+  border-bottom-width: 0px;
+  border-left-width: $width;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-style: solid;
+  border-color: rgba(var(--r), var(--g), var(--b), $a);
+}
+@mixin base-border-end($width: 1px, $a: 1) {
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: $width;
+  border-top-width: 0px;
+  border-style: solid;
+  border-color: rgba(var(--r), var(--g), var(--b), $a);
+}
+@mixin base-border-bottom($width: 1px, $a: 1) {
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: $width;
+  border-style: solid;
+  border-color: rgba(var(--r), var(--g), var(--b), $a);
+}
+@mixin base-border-x($width: 1px, $a: 1) {
+  border-top-width: 0;
+  border-left-width: $width;
+  border-right-width: $width;
+  border-bottom-width: 0;
+  border-style: solid;
+  border-color: rgba(var(--r), var(--g), var(--b), $a);
+}
+@mixin base-border-y($width: 1px, $a: 1) {
+  border-top-width: $width;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: $width;
+  border-style: solid;
+  border-color: rgba(var(--r), var(--g), var(--b), $a);
+}

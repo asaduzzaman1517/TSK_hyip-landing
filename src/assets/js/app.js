@@ -1,139 +1,189 @@
-'use strict';
+(function ($) {
+  "use strict";
 
-$( document ).ready(function() {
-  //preloader
-  $(".preloader").delay(300).animate({
-    "opacity" : "0"
-    }, 300, function() {
-    $(".preloader").css("display","none");
-  });
-});
-
-// mobile menu js
-$(".navbar-collapse>ul>li>a, .navbar-collapse ul.sub-menu>li>a").on("click", function() {
-  const element = $(this).parent("li");
-  if (element.hasClass("open")) {
-    element.removeClass("open");
-    element.find("li").removeClass("open");
-  }
-  else {
-    element.addClass("open");
-    element.siblings("li").removeClass("open");
-    element.siblings("li").find("li").removeClass("open");
-  }
-});
-
-
-$('.header__search-btn').on('click', function(){
-  $(this).toggleClass('active');
-  $('.header-search-form').toggleClass('active');
-});
-
-$(document).on('click touchstart', function (e){
-  if (!$(e.target).is('.header__search-btn, .header__search-btn *, .header-search-form, .header-search-form *')) {
-    $('.header-search-form').removeClass('active');
-    $('.header__search-btn').removeClass('active');
-  }
-});
-
-// main wrapper calculator
-var bodySelector = document.querySelector('body');
-var header = document.querySelector('.header');
-var footer = document.querySelector('.footer');
-
-(function(){
-  if(bodySelector.contains(header) && bodySelector.contains(footer)){
-    var headerHeight = document.querySelector('.header').clientHeight;
-    var footerHeight = document.querySelector('.footer').clientHeight;
-
-    // if header isn't fixed to top
-    var totalHeight = parseInt( headerHeight, 10 ) + parseInt( footerHeight, 10 ) + 'px'; 
-    
-    // if header is fixed to top
-    // var totalHeight = parseInt( footerHeight, 10 ) + 'px'; 
-    var minHeight = '100vh';
-    document.querySelector('.main-wrapper').style.minHeight = `calc(${minHeight} - ${totalHeight})`;
-  }
-})();
-
-
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
-
-// Show or hide the sticky footer button
-$(window).on("scroll", function() {
-	if ($(this).scrollTop() > 200) {
-			$(".scroll-to-top").fadeIn(200);
-	} else {
-			$(".scroll-to-top").fadeOut(200);
-	}
-});
-
-// Animate the scroll to top
-$(".scroll-to-top").on("click", function(event) {
-	event.preventDefault();
-	$("html, body").animate({scrollTop: 0}, 300);
-});
-
-new WOW().init();
-
-// lightcase plugin init
-$('a[data-rel^=lightcase]').lightcase();
-
-// faq js
-$('.faq-single__header').each(function(){
-  $(this).on('click', function(){
-    $(this).siblings('.faq-single__content').slideToggle();
-    $(this).parent('.faq-single').toggleClass('active');
-  });
-});
-
-// brand image append js
-$('.brand-item').each(function(){
-  var imgsrc = $(this).attr('data-src');
-  $(this).append(`
-    <img src="${imgsrc}" alt="image" class="front-img">
-    <img src="${imgsrc}" alt="image" class="back-img">
-  `)
-});
-
-// testimonial-slider js 
-$('.testimonial-slider').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  dots: true,
-  arrows: false,
-  autoplay: true,
-  cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
-  speed: 2000,
-  autoplaySpeed: 1000,
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 4,
-      }
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-      }
+  $(document).ready(function () {
+    // Mobile Menu Dropdown
+    const mobileNavToggler = document.querySelector(".nav--toggle");
+    const body = document.querySelector("body");
+    if (mobileNavToggler) {
+      mobileNavToggler.addEventListener("click", function () {
+        body.classList.toggle("nav-toggler");
+      });
     }
-  ]
+    // Mobile Menu Dropdown End
+
+    // Mobile Submenu
+    $(".primary-menu__list.has-sub .primary-menu__link").on(
+      "click",
+      function (e) {
+        e.preventDefault();
+        body.classList.add("primary-submenu-toggler");
+      }
+    );
+    $(".primary-menu__list.has-sub.active .primary-menu__link").on(
+      "click",
+      function (e) {
+        e.preventDefault();
+        body.classList.remove("primary-submenu-toggler");
+      }
+    );
+    $(".primary-menu__list.has-sub").on("click", function () {
+      $(this).toggleClass("active").siblings().removeClass("active");
+    });
+    // Mobile Submenu End
+
+    //   Nice Select Inititate
+    $(".custom--select").niceSelect();
+    //   Nice Select End
+
+    // Search Popup
+    var bodyOvrelay = $("#body-overlay");
+    var searchPopup = $("#search-popup");
+
+    $(document).on("click", "#body-overlay", function (e) {
+      e.preventDefault();
+      bodyOvrelay.removeClass("active");
+      searchPopup.removeClass("active");
+    });
+    $(document).on("click", ".search--toggler", function (e) {
+      e.preventDefault();
+      searchPopup.addClass("active");
+      bodyOvrelay.addClass("active");
+    });
+    // Search Popup End
+
+    // Magnific Popup
+    var magPhoto = $(".show-video");
+    if (magPhoto.length) {
+      magPhoto.magnificPopup({
+        disableOn: 700,
+        type: "iframe",
+        mainClass: "mfp-fade",
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false,
+        disableOn: 300,
+      });
+    }
+    // Magnific Popup End
+
+    // Testimonial Slider
+    let testimonialSlider = $(".testimonial-slider");
+    if (testimonialSlider) {
+      testimonialSlider.slick({
+        mobileFirst: true,
+        arrows: false,
+        autoplay: true,
+        responsive: [
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 1599,
+            settings: {
+              slidesToShow: 4,
+            },
+          },
+        ],
+      });
+    }
+    // Testimonial Slider End
+
+    // Client Slider
+    let clientSlider = $(".client-slider");
+    if (clientSlider) {
+      clientSlider.slick({
+        mobileFirst: true,
+        arrows: false,
+        autoplay: true,
+        slidesToShow: 2,
+        autoplaySpeed: 1000,
+        speed: 2000,
+        responsive: [
+          {
+            breakpoint: 567,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 4,
+            },
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 5,
+            },
+          },
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 6,
+            },
+          },
+          {
+            breakpoint: 1399,
+            settings: {
+              slidesToShow: 7,
+            },
+          },
+        ],
+      });
+    }
+    // Client Slider End
+
+    // Animate the scroll to top
+    $(".back-to-top").on("click", function (event) {
+      event.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, 300);
+    });
+  });
+})(jQuery);
+
+// Header Fixed On Scroll
+var bodySelector = document.querySelector("body");
+const header = document.querySelector(".header-fixed");
+
+if (bodySelector.contains(header)) {
+  const headerTop = header.offsetTop;
+  function fixHeader() {
+    if (window.scrollY > headerTop) {
+      document.body.classList.add("fixed-header");
+    } else if (window.scrollY <= headerTop) {
+      document.body.classList.remove("fixed-header");
+    } else {
+      document.body.classList.remove("fixed-header");
+    }
+  }
+  $(window).on("scroll", function () {
+    fixHeader();
+  });
+}
+
+// Header Fixed On Scroll End
+$(window).on("scroll", function () {
+  var ScrollTop = $(".back-to-top");
+  if ($(window).scrollTop() > 1200) {
+    ScrollTop.fadeIn(1000);
+  } else {
+    ScrollTop.fadeOut(1000);
+  }
+});
+
+$(window).on("load", function () {
+  // Preloader
+  var preLoder = $(".preloader");
+  preLoder.fadeOut(1000);
 });

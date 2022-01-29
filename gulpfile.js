@@ -20,7 +20,7 @@ function style() {
 };
 
 function htmlfileinclude() {
-  return gulp.src('./src/html/*.html')
+  return gulp.src('./src/html/layouts/*.html')
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
@@ -37,12 +37,12 @@ function watch() {
     }
   });
 
-  gulp.watch('./src/partial-html/*.html', htmlfileinclude);
-  gulp.watch('./src/html/*.html', htmlfileinclude);
+  gulp.watch('./src/html/partials/*.html', htmlfileinclude);
+  gulp.watch('./src/html/layouts/*.html', htmlfileinclude);
   gulp.watch('./src/assets/sass/**/*.scss', style);
 
-  gulp.watch('./src/partial-html/*.html').on('change', browserSync.reload);
-  gulp.watch('./src/html/*.html').on('change', browserSync.reload);
+  gulp.watch('./src/html/partials/*.html').on('change', browserSync.reload);
+  gulp.watch('./src/html/layouts/*.html').on('change', browserSync.reload);
   gulp.watch('./src/assets/sass/**/*.scss').on('change', browserSync.reload);
 }
 
