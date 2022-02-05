@@ -471,6 +471,7 @@ textarea {
     visibility: hidden;
     opacity: 0;
     z-index: -9999;
+    box-shadow: 0 5px 15px 0 rgba(var(--dark-r), var(--dark-g), var(--dark-b), 0.3);
 }
 
 @media screen and (min-width: 992px) {
@@ -485,6 +486,7 @@ textarea {
         opacity: 1;
         z-index: 9998;
         background: transparent;
+        box-shadow: none;
     }
 
     .navs::after {
@@ -2034,42 +2036,58 @@ textarea {
 /*---------------------------------------
     2.24 Form Select
 -----------------------------------------*/
+.form--select-container {
+    position: relative;
+    isolation: isolate;
+    border: 1px solid #023ea1;
+    background: #012155;
+}
+
+.form--select-container::after {
+    content: "\f107";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    position: absolute;
+    color: var(--white);
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    z-index: -1;
+}
+
 .form--select {
     height: 50px;
     border-radius: 3px;
     border-radius: 2px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(var(--r), var(--g), var(--b), 1);
-    background-color: rgba(var(--r), var(--g), var(--b), 1);
+    background: transparent;
+    border: none;
     color: var(--white);
+    position: relative;
 }
 
 .form--select:focus {
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(var(--r), var(--g), var(--b), 1);
-    box-shadow: 0 3px 6px 0 rgba(var(--r), var(--g), var(--b), 0.3);
-    background-color: rgba(var(--r), var(--g), var(--b), 1);
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    z-index: -1;
 }
 
 .form--select-sm {
     border-radius: 3px;
     border-radius: 2px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(var(--r), var(--g), var(--b), 1);
-    background-color: rgba(var(--r), var(--g), var(--b), 1);
-    color: var(--white);
+    border: none;
+    background: transparent;
     font-size: 0.875rem;
+    color: var(--white);
+    position: relative;
 }
 
 .form--select-sm:focus {
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(var(--r), var(--g), var(--b), 1);
-    box-shadow: 0 3px 6px 0 rgba(var(--r), var(--g), var(--b), 0.3);
-    background-color: rgba(var(--r), var(--g), var(--b), 1);
+    border: none;
+    background: inherit;
+    box-shadow: none;
+    z-index: -1;
 }
 
 /*---------------------------------------
