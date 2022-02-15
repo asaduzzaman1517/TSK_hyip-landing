@@ -52,7 +52,7 @@
       padding: 0;
       text-align: center;
       border: 0;
-      color: var(--white);
+      @include light-clr;
       &:hover{
         background: $accent-clr;
         cursor: pointer;
@@ -64,7 +64,7 @@
     width: 100%;
     height: 100%;
     display: block;
-    background-color: rgba($black, .6);
+    @include dark-bg(.6);
     z-index: 9998;
     content: '';
     left: 0;

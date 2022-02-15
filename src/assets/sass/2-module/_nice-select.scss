@@ -20,9 +20,9 @@
       border-radius: 0 0 5px 5px;
       box-shadow: 0 10px 15px rgba($dark, 0.2);
       .option {
-        color: var(--white);
+        @include light-clr;
         &:hover {
-          color: var(--white);
+          @include light-clr;
           background: darken($primary, 5%);
         }
       }
@@ -41,16 +41,16 @@
   }
   &--outline {
     .nice-select {
-      border: 1px solid var(--white);
+      border: 1px solid $light;
     }
   }
   &--light {
     .nice-select::after {
-      border-bottom: 2px solid var(--white);
-      border-right: 2px solid var(--white);
+      border-bottom: 2px solid $light;
+      border-right: 2px solid $light;
     }
     .current {
-      color: var(--white);
+      @include light-clr;
     }
   }
 }

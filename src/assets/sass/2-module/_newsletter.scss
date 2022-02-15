@@ -5,7 +5,7 @@
     &__container {
         display: flex;
         padding: 5px;
-        background: var(--white);
+        @include light-bg;
     }
     
     &__input {

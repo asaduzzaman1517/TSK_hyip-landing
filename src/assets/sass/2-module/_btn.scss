@@ -9,73 +9,73 @@
     // Color Option
     &--primary {
       background: $primary;
-      color: var(--white);
+      @include light-clr;
       &:hover {
-        color: var(--white);
+        @include light-clr;
         background: darken($primary, 3%);
       }
     }
     &--secondary {
       background: $secondary;
-      color: var(--white);
+      @include light-clr;
       &:hover {
-        color: var(--white);
+        @include light-clr;
         background: darken($secondary, 3%);
       }
     }
     &--success {
       background: $success;
-      color: var(--white);
+      @include light-clr;
       &:hover {
-        color: var(--white);
+        @include light-clr;
         background: darken($success, 3%);
       }
     }
     &--danger {
       background: $danger;
-      color: var(--white);
+      @include light-clr;
       &:hover {
-        color: var(--white);
+        @include light-clr;
         background: darken($danger, 3%);
       }
     }
     &--warning {
       background: $warning;
-      color: var(--white);
+      @include light-clr;
       &:hover {
-        color: var(--white);
+        @include light-clr;
         background: darken($warning, 3%);
       }
     }
     &--info {
       background: $info;
-      color: var(--white);
+      @include light-clr;
       &:hover {
-        color: var(--white);
+        @include light-clr;
         background: darken($info, 3%);
       }
     }
     &--dark {
       background: $dark;
-      color: var(--white);
+      @include light-clr;
       &:hover {
-        color: var(--white);
+        @include light-clr;
         background: darken($dark, 3%);
       }
     }
     &--light {
-      background: var(--white);
+      @include light-bg;
       color: $primary;
       &:hover {
-        color: var(--white);
+        @include light-clr;
         background: $dark;
       }
     }
     &--base {
       @include base-bg;
-      color: var(--white);
+      @include light-clr;
       &:hover {
-        color: $accent-clr;
+        @include light-clr;
         @include base-bg;
       }
     }
@@ -106,12 +106,12 @@
       border: 1px solid $border;
       background: transparent;
       &:hover {
-        color: var(--white);
+        @include light-clr;
         background: $primary;
         border-color: $primary;
       }
       &.active {
-        color: var(--white);
+        @include light-clr;
         background: $primary;
         border-color: $primary;
       }
@@ -127,12 +127,12 @@
       @include base-clr;
       &:hover {
         @include base-clr;
-        background: var(--white);
+        @include light-bg;
         @include base-border(2px);
       }
       &.active {
         @include base-bg;
-        color: var(--white);
+        @include light-clr;
       }
     }
   }

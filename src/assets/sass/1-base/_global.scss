@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 :root {
   --h1: clamp(2.8125rem, 4vw + 1rem, 4.209rem); //Min:45px - Max:67.34px
   --h2: clamp(2.0625rem, 3vw + 1rem , 3.1575rem); //Min: 33px - Max: 50.52px
@@ -8,9 +8,9 @@
   --h6: 1rem;
 
   // Base Colors
-  --r: 44;
-  --g: 185;
-  --b: 120;
+  --r: 68;
+  --g: 109;
+  --b: 255;
         
   // Dark Color 
   --dark-r: 0;
@@ -22,8 +22,6 @@
   --light-g: 255;
   --light-b: 255;
 
-  // Color 
-  --white: #fff;
 }
 
 
@@ -33,7 +31,7 @@ html {
 
 body {
   position: relative;
-  background-color: var(--white);
+  @include light-clr;
   font-family: $body-font;
   font-size: 1rem;
   font-weight: 400;
@@ -53,7 +51,7 @@ h4,
 h5 {
   margin: 1.5rem 0 1rem;
   font-family: $heading-font;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.15;
   color: $heading-clr;
 }
@@ -105,7 +103,7 @@ small,
   line-height: 1;
 }
 .hr {
-  background-color: rgb(var(--r),var(--g),var(--b));
+  @include base-bg;
 }
 
 // Button Default
@@ -125,7 +123,7 @@ input:focus {
   outline: none;
 }
 .form-control {
-  border-color: rgba($black, 0.1);
+  @include dark-border-clr(.1);
 }
 
 textarea {

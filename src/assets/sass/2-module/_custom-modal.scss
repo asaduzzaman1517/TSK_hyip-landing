@@ -1,7 +1,7 @@
 .custom--modal {
     .modal-content {
       border-radius: 5px;
-      background: var(--white);
+      @include light-bg;
       border: 1px solid $border;
     }
     .modal-title {
@@ -53,12 +53,12 @@
     }
     .modal-title {
       margin-top: 0;
-      color: var(--white);
+      @include light-clr;
     }
     .btn-close {
       position: relative;
       background: transparent;
-      color: var(--white);
+      @include light-clr;
       opacity: 1;
       transition: all .3s ease;
       &:hover {
@@ -78,7 +78,7 @@
       }
     }
     .modal-body {
-        color: var(--white);
+        @include light-clr;
     }
     .modal-header {
       border-bottom: 1px solid lighten($accent-clr, 25%);

@@ -8,10 +8,10 @@
   text-transform: capitalize;
   font-family: $heading-font;
   font-weight: 700;
-  color: var(--white);
+  @include light-clr;
   letter-spacing: 0.03em;
   &:hover {
-    color: var(--white);
+    @include light-clr;
   }
   @include lg-screen {
     height: 64px;

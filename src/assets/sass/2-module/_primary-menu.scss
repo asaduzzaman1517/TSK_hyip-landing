@@ -7,7 +7,7 @@
     background: $dark;
     .primary-menu__link {
       @include lg-screen {
-        color: var(--white);
+        @include light-clr;
       }
     }
   }
@@ -79,7 +79,7 @@
     transition: all 0.3s ease;
     color: $dark;
     @include lg-screen {
-      color: var(--white);
+      @include light-clr;
       margin-left: 0;
       margin-right: 0;
       font-weight: 700;
@@ -129,7 +129,7 @@
     height: 0;
     transition: all 0.3s ease;
     @include lg-screen {
-      min-width: 200px;
+      min-width: 220px;
       height: auto;
       padding: 15px;
       position: absolute;
@@ -138,7 +138,7 @@
       transform: translateX(-50%);
       margin-left: 0;
       margin-right: 0;
-      background: var(--white) !important;
+      @include light-bg;
       border-radius: 5px;
       box-shadow: 0 5px 15px rgba($dark, 0.4);
       &::after {
@@ -146,7 +146,7 @@
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         border-top: 10px solid transparent;
-        border-bottom: 10px solid var(--white);
+        border-bottom: 10px solid $light;
         position: absolute;
         top: -20px;
         left: 50%;
@@ -178,19 +178,19 @@
       display: block;
       padding: 8px 14px;
       @include base-bg;
-      color: var(--white);
+      @include light-clr;
       transition: all 0.3s ease;
       position: relative;
       @include lg-screen {
-        background: var(--white);
+        @include light-bg;
         color: $heading-clr;
         border-radius: 3px !important;
         text-align: center;
       }
       &:hover {
-        color: var(--white);
+        @include light-clr;
         @include lg-screen {
-          color: var(--white);
+          @include light-clr;
           @include base-bg;
         }
       }

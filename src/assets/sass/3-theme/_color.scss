@@ -20,7 +20,7 @@
   color: $dark;
 }
 .text--white {
-  color: var(--white);
+  @include light-clr;
 }
 .text-clr {
   color: $text-clr;

@@ -36,7 +36,7 @@
     font-family: "Line Awesome Free";
     font-weight: 900;
     position: absolute;
-    color: var(--white);
+    @include light-clr;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
@@ -44,10 +44,10 @@
     z-index: -1;
   }
   .form--select {
-    color: var(--white);
+    @include light-clr;
   }
   .form--select-sm {
-    color: var(--white);
+    @include light-clr;
   }
 }
 .form--select {

@@ -29,14 +29,14 @@
       box-shadow: none;
     }
     &-light {
-      border-color: var(--white);
-      color: var(--white);
+      border-color: $light;
+      @include light-clr;
       &::placeholder {
-        color: var(--white);
+        @include light-clr;
       }
       &:focus {
-        border-color: var(--white);
-        color: var(--white);
+        border-color: $light;
+        @include light-clr;
       }
     }
     &-dark {
@@ -73,12 +73,12 @@
   &[readonly] {
     background: $gray;
     border: 1px solid $border;
-    color: var(--white);
+    @include light-clr;
   }
   &[disabled] {
     background: $gray;
     border: 1px solid $border;
-    color: var(--white);
+    @include light-clr;
   }
 }
 .input-group-text {

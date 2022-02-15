@@ -5,7 +5,7 @@
   width: 40px;
   height: 40px;
   @include base-bg;
-  color: var(--white);
+  @include light-clr;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;

@@ -28,7 +28,7 @@
   }
   &--light {
     &:hover {
-      color: var(--white);
+      @include light-clr;
     }
   }
   &--base {

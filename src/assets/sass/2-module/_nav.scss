@@ -7,7 +7,7 @@
     top: calc(100% + 20px);
     right: 0;
     border-radius: 5px;
-    background: var(--white);
+    @include light-bg;
     transition: all .4s ease;
     visibility: hidden;
     opacity: 0;
@@ -34,7 +34,7 @@
         border-top: 10px solid transparent;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-bottom: 10px solid var(--white);
+        border-bottom: 10px solid $light;
         position: absolute;
         top: -20px;
         right: 10px;
@@ -42,13 +42,13 @@
     &--toggle{
         padding: 3px 5px;
         border-radius: 2px;
-        border: 1px solid var(--white);
+        border: 1px solid $light;
         font-size: 24px;
-        color: var(--white);
+        @include light-clr;
         line-height: 1;
         transition: all .3s ease;
         &:hover {
-            background: var(--white);
+            @include light-bg;
             color: $dark;
         }
     }

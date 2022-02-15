@@ -70,7 +70,7 @@
         content: "\f00c";
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
-        color: var(--white);
+        @include light-clr;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -93,7 +93,7 @@
         content: "\f00c";
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
-        color: var(--white);
+        @include light-clr;
         display: inline-flex;
         align-items: center;
         justify-content: center;

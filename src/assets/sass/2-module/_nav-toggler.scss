@@ -8,7 +8,7 @@
             top: auto;
         }
         &--toggle {
-            background: var(--white);
+            @include light-bg;
             color: $text-clr;
         }
     }
