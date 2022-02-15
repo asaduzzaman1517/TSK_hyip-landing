@@ -1,10 +1,92 @@
-.contact-card {
-    padding: 30px;
-    @include base-border;
-    border-radius: 5px;
-    @include base-bg(.25);
-    &__title {
-        font-size: 18px;
-        font-weight: 500;
+.custom--modal {
+    .modal-content {
+      border-radius: 5px;
+      background: var(--white);
+      border: 1px solid $border;
     }
-}
+    .modal-title {
+      margin-top: 0;
+      color: $heading-clr;
+    }
+    .btn-close {
+      position: relative;
+      background: transparent;
+      color: $accent-clr;
+      opacity: 1;
+      transition: all .3s ease;
+      &:hover {
+        outline: none;
+        box-shadow: none;
+        @include base-clr;
+      }
+      &::after {
+        content: "\f00d";
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 34px;
+      }
+    }
+    .modal-body {
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .modal-header {
+      border-bottom: 1px solid $border;
+      background: $light;
+    }
+    .modal-footer {
+      border-top: 1px solid $border;
+      background: $light;
+    }
+  }
+  
+  .custom--modal-dark {
+    .modal-content {
+      border-radius: 5px;
+      background: lighten($accent-clr, 15%);
+      border: 1px solid lighten($accent-clr, 25%);
+    }
+    .modal-title {
+      margin-top: 0;
+      color: var(--white);
+    }
+    .btn-close {
+      position: relative;
+      background: transparent;
+      color: var(--white);
+      opacity: 1;
+      transition: all .3s ease;
+      &:hover {
+        outline: none;
+        box-shadow: none;
+        @include base-clr;
+      }
+      &::after {
+        content: "\f00d";
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 34px;
+      }
+    }
+    .modal-body {
+        color: var(--white);
+    }
+    .modal-header {
+      border-bottom: 1px solid lighten($accent-clr, 25%);
+      background: lighten($accent-clr, 13%);
+    }
+    .modal-footer {
+      border-top: 1px solid lighten($accent-clr, 25%);
+      background: lighten($accent-clr, 13%);
+    }
+  }
+  

@@ -13,13 +13,13 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(to right, rgba($accent-clr, 0.9), rgba($accent-clr, 0.5));
+    background-image: linear-gradient(to right, rgba(var(--dark-r), var(--dark-g), var(--dark-b), 0.8), rgba(var(--dark-r), var(--dark-g), var(--dark-b), 0.5));
     mix-blend-mode: darken;
     z-index: -1;
   }
   &__content {
-    padding-top: clamp(100px, 12vw, 160px);
-    padding-bottom: clamp(50px, 8vw, 80px);
+    padding-top: clamp(140px, 12vw, 170px);
+    padding-bottom: clamp(80px, 8vw, 100px);
     margin-top: auto;
     margin-bottom: auto;
   }

@@ -1,6 +1,33 @@
-.form--select-container {
+.form--select-light {
   position: relative;
   isolation: isolate;
+  border: 1px solid $border;
+  border-radius: 3px;
+  background: $light;
+
+  &::after {
+    content: "\f107";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    position: absolute;
+    color: $accent-clr;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    z-index: -1;
+  }
+  .form--select {
+    color: $accent-clr;
+  }
+  .form--select-sm {
+    color: $accent-clr;
+  }
+}
+.form--select-dark {
+  position: relative;
+  isolation: isolate;
+  border-radius: 3px;
   border: 1px solid lighten($accent-clr, 15%);
   background: $accent-clr;
 
@@ -10,11 +37,17 @@
     font-weight: 900;
     position: absolute;
     color: var(--white);
-    right: 5px;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 0.75rem;
     z-index: -1;
+  }
+  .form--select {
+    color: var(--white);
+  }
+  .form--select-sm {
+    color: var(--white);
   }
 }
 .form--select {
@@ -23,8 +56,9 @@
   border-radius: 2px;
   background: transparent;
   border: none;
-  color: var(--white);
+  
   position: relative;
+  font-size: 0.875rem;
   &:focus {
     border: none;
     background: transparent;
@@ -37,7 +71,6 @@
     border: none;
     background: transparent;
     font-size: 0.875rem;
-    color: var(--white);
     position: relative;
     &:focus {
       border: none;

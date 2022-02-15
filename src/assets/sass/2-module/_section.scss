@@ -14,6 +14,9 @@
   &__head {
     padding-bottom: clamp(30px, 4vw, 60px);
   }
+  &__para {
+    max-width: 60ch;
+  }
   &__subtitle {
     display: inline-block;
     position: relative;

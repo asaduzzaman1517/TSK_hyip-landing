@@ -3,6 +3,7 @@
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba($black, .2);
     @include base-border-y(4px, 1);
+    background: var(--white);
     @include xlii-screen {
         padding: 40px 30px;
     }

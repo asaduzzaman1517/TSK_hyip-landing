@@ -20,9 +20,8 @@
         padding: 10px 0;
         position: absolute;
         width: 100%;
-        background: rgba($accent-clr, .5);
+        background: rgba(var(--dark-r), var(--dark-g), var(--dark-b), .5);
         z-index: 10;
-        @include base-border-bottom(1px , .5);
         transition: all .3s ease;
     }
 }
