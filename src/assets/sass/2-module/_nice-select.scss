@@ -10,47 +10,47 @@
       height: 8px;
       width: 8px;
       margin-top: -6px;
-      border-bottom: 2px solid $primary;
-      border-right: 2px solid $primary;
+      border-bottom: 2px solid hsl(var(--primary));
+      border-right: 2px solid hsl(var(--primary));
     }
     .list {
       flex-direction: column;
-      background: $primary;
+      background: hsl(var(--primary));
       right: 0;
       border-radius: 0 0 5px 5px;
-      box-shadow: 0 10px 15px rgba($dark, 0.2);
+      box-shadow: 0 10px 15px hsl(var(--dark)/.2);
       .option {
-        @include light-clr;
+        color: hsl(var(--white));
         &:hover {
-          @include light-clr;
-          background: darken($primary, 5%);
+          color: hsl(var(--white));
+          background: hsl(var(--primary));
         }
       }
       .selected {
-        background: darken($primary, 7%);
+        background: hsl(var(--primary));
       }
     }
     .current {
-      color: rgba($text-clr, 0.7);
+      color: hsl(var(--text)/.7);
     }
   }
   .nice-select:active,
   .nice-select.open,
   .nice-select:focus {
-    border-color: $border;
+    border-color: hsl(var(--border));
   }
   &--outline {
     .nice-select {
-      border: 1px solid $light;
+      border: 1px solid hsl(var(--light));
     }
   }
   &--light {
     .nice-select::after {
-      border-bottom: 2px solid $light;
-      border-right: 2px solid $light;
+      border-bottom: 2px solid hsl(var(--light));
+      border-right: 2px solid hsl(var(--light));
     }
     .current {
-      @include light-clr;
+      color: hsl(var(--white));
     }
   }
 }

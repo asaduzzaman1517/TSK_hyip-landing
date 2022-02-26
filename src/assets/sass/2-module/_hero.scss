@@ -17,7 +17,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(to right, rgba($accent-clr, 0.5), rgba($accent-clr, 0.2));
+    background-image: linear-gradient(to right, hsl(var(--accent)/.5), hsl(var(--accent)/.2));
     mix-blend-mode: multiply;
     z-index: -1;
   }

@@ -1,20 +1,20 @@
 .newsletter {
-    @include base-border(2px, 1);
+  border: 2px solid rgb(var(--base));
     padding: 5px;
     max-width: 550px;
     &__container {
         display: flex;
         padding: 5px;
-        @include light-bg;
+        background-color: hsl(var(--white));
     }
     
     &__input {
         background: transparent;
         border: none;
-        color: $heading-clr;
+        color: hsl(var(--heading));
         font-size: 14px;
         &:focus {
-            color: $heading-clr;
+          color: hsl(var(--heading));
             outline: none;
             box-shadow: none;
             border-color: transparent;
@@ -22,7 +22,7 @@
             border-width: 0;
           }
           &::placeholder {
-              color: $text-clr;
+            color: hsl(var(--text));
           }
     }
 }

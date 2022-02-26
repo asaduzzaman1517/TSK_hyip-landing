@@ -11,10 +11,10 @@
     &__link {
         display: inline-block;
         padding-bottom: 1rem;
-        color: $text-clr;
+        color: hsl(var(--text));
         transition: all .3s ease;
         &:hover {
-            @include base-clr;
+            color: rgb(var(--base));
         }
     }
 }

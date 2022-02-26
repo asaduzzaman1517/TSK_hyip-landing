@@ -10,9 +10,9 @@
         position: fixed;
         top: 0;
         left: 0;
-        @include base-shadow(0, 15px, 30px, 0, .1);
+        box-shadow: 0 15px 30px hsl(var(--black)/.1);
     }
     .header--primary {
-        background: $accent-clr;
+        background: hsl(var(--accent));
     }
 }

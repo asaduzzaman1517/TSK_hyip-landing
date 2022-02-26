@@ -1,36 +1,36 @@
 .text--primary {
-  color: $primary;
+  color: hsl(var(--primary));
 }
 .text--secondary {
-  color: $secondary;
+  color: hsl(var(--secondary));
 }
 .text--success {
-  color: $success;
+  color: hsl(var(--success));
 }
 .text--danger {
-  color: $danger;
+  color: hsl(var(--danger));
 }
 .text--warning {
-  color: $warning;
+  color: hsl(var(--warning));
 }
 .text--info {
-  color: $info;
+  color: hsl(var(--info));
 }
 .text--dark {
-  color: $dark;
+  color: hsl(var(--dark));
 }
 .text--white {
-  @include light-clr;
+  color: hsl(var(--white));
 }
 .text-clr {
-  color: $text-clr;
+  color: hsl(var(--text));
 }
 .heading-clr {
-  color: $heading-clr;
+  color: hsl(var(--heading));
 }
 .text--base {
-  @include base-clr;
+  color: rgb(var(--base));
 }
 .text--accent {
-  color: $accent-clr;
+  color: hsl(var(--accent));
 }

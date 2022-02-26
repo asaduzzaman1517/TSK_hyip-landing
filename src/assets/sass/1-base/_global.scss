@@ -1,29 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap");
 :root {
+  // TypoGraphy
+  --heading-font: "Inter", sans-serif;
+  --body-font: "Roboto", sans-serif;
+
   --h1: clamp(2.8125rem, 4vw + 1rem, 4.209rem); //Min:45px - Max:67.34px
-  --h2: clamp(2.0625rem, 3vw + 1rem , 3.1575rem); //Min: 33px - Max: 50.52px
+  --h2: clamp(2.0625rem, 3vw + 1rem, 3.1575rem); //Min: 33px - Max: 50.52px
   --h3: clamp(1.875rem, 2.7vw + 1rem, 2.369rem); //Min: 30px - Max: 37.90px
   --h4: 1.777rem; //28.43px
   --h5: 1.333rem; //21.33px
   --h6: 1rem;
 
-  // Base Colors
-  --r: 68;
-  --g: 109;
-  --b: 255;
-        
-  // Dark Color 
-  --dark-r: 0;
-  --dark-g: 0;
-  --dark-b: 0;
+  // Colors
+  --base: 0 180 216; // This will be DYNAMIC value
+  // Accent Color Shade 
+  --accent-h: 214;
+  --accent-s: 97%;
+  --accent-l: 27%;
+  --accent-50: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 25%);
+  --accent-100: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 20%);
+  --accent-200: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 15%);
+  --accent-300: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 10%);
+  --accent-400: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 5%);
+  --accent: var(--accent-h) var(--accent-s) var(--accent-l);
+  --accent-600: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 5%);
+  --accent-700: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 10%);
+  --accent-800: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 15%);
+  --accent-900: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 20%);
 
-  // Light 
-  --light-r: 255;
-  --light-g: 255;
-  --light-b: 255;
+  --primary: 199 100% 60%;
+  --secondary: 210 11% 71%;
+  --success: 177 76% 44%;
+  --danger: 358 91% 66%;
+  --warning: 29 100% 63%;
+  --info: 188 92% 45%;
+  --dark: 225 23% 17%;
 
+  --text: 0 0 46;
+  --heading: 0 0% 13%;
+  --border: 0 0% 88%;
+  --light: 210 33% 98%;
+
+  --black: 0 0% 0%;
+  --white: 0 0% 100%;
 }
-
 
 html {
   font-size: 16px;
@@ -31,12 +51,11 @@ html {
 
 body {
   position: relative;
-  @include light-clr;
-  font-family: $body-font;
+  font-family: var(--body-font);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: $text-clr;
+  color: hsl(var(--text));
 }
 
 // Typography
@@ -50,10 +69,10 @@ h3,
 h4,
 h5 {
   margin: 1.5rem 0 1rem;
-  font-family: $heading-font;
+  font-family: var(--heading-font);
   font-weight: 500;
   line-height: 1.15;
-  color: $heading-clr;
+  color: hsl(var(--heading));
 }
 
 h1 {
@@ -66,7 +85,7 @@ h2 {
 }
 
 h3 {
-  font-size: var(--h3); 
+  font-size: var(--h3);
 }
 
 h4 {
@@ -103,7 +122,7 @@ small,
   line-height: 1;
 }
 .hr {
-  @include base-bg;
+  background-color: rgb(var(--base));
 }
 
 // Button Default
@@ -123,7 +142,7 @@ input:focus {
   outline: none;
 }
 .form-control {
-  @include dark-border-clr(.1);
+  border: 1px solid hsl(var(--black)/.1);
 }
 
 textarea {
@@ -145,6 +164,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }

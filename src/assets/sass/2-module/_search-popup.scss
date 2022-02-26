@@ -47,14 +47,14 @@
       height: 55px;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px; 
-      @include base-bg;
+      background-color: rgb(var(--base));
       transition: all .3s ease;
       padding: 0;
       text-align: center;
       border: 0;
-      @include light-clr;
+      color: hsl(var(--white));
       &:hover{
-        background: $accent-clr;
+        background: hsl(var(--accent));
         cursor: pointer;
       }
     }
@@ -64,7 +64,7 @@
     width: 100%;
     height: 100%;
     display: block;
-    @include dark-bg(.6);
+    background-color: hsl(var(--black)/.6);
     z-index: 9998;
     content: '';
     left: 0;

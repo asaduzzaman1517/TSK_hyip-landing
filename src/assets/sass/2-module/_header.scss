@@ -8,7 +8,7 @@
     &__top {
         padding: 13px 45px;
         position: relative;
-        background: $light;
+        background: hsl(var(--light));
             @include lg-screen {
                 padding: 12px  25px;
             }

@@ -3,23 +3,23 @@
   line-height: 40px;
   border-radius: 3px;
   font-size: 14px;
-  border: 1px solid $border;
-  background: $light;
-  color: $accent-clr;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--light));
+  color: hsl(var(--accent));
   transition: all 0.3s ease;
   &::placeholder {
     text-transform: capitalize;
-    color: rgba($accent-clr, 0.5);
+    color: hsl(var(--accent)/.5);
   }
   &:focus {
     outline: none;
-    border: 1px solid $border;
-    background: darken($light, 3%);
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--light));
     box-shadow: none;
   }
   &:-webkit-autofill {
-    -webkit-text-fill-color: $accent-clr !important;
-    -webkit-box-shadow: 0 0 0px 1000px $light inset;
+    -webkit-text-fill-color: hsl(var(--accent)) !important;
+    -webkit-box-shadow: 0 0 0px 1000px hsl(var(--light)) inset;
   }
   &-outline {
     background: transparent;
@@ -29,25 +29,25 @@
       box-shadow: none;
     }
     &-light {
-      border-color: $light;
-      @include light-clr;
+      border-color: hsl(var(--light));
+      color: hsl(var(--white));
       &::placeholder {
-        @include light-clr;
+        color: hsl(var(--white));
       }
       &:focus {
-        border-color: $light;
-        @include light-clr;
+        border-color: hsl(var(--light));
+        color: hsl(var(--white));
       }
     }
     &-dark {
-      border-color: $border;
-      color: $text-clr;
+      border-color: hsl(var(--border));
+      color: hsl(var(--text));
       &::placeholder {
-        color: rgba($text-clr, 0.7);
+        color: hsl(var(--text)/.7);
       }
       &:focus {
-        border-color: $border;
-        color: $text-clr;
+        border-color: hsl(var(--border));
+        color: hsl(var(--text));
       }
     }
   }
@@ -55,34 +55,34 @@
     padding-top: 15px;
     border-radius: 3px;
     font-size: 14px;
-    border: 1px solid $border;
-    background: $light;
-    color: $accent-clr;
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--light));
+    color: hsl(var(--accent));
     transition: all 0.3s ease;
     &::placeholder {
       text-transform: capitalize;
-      color: rgba($accent-clr, 0.5);
+      color: hsl(var(--accent)/.5);
     }
     &:focus {
       outline: none;
-      border: 1px solid $border;
-      background: darken($light, 3%);
+      border: 1px solid hsl(var(--border));
+      background: hsl(var(--light));
       box-shadow: none;
     }
   }
   &[readonly] {
-    background: $gray;
-    border: 1px solid $border;
-    @include light-clr;
+    background: hsl(var(--light));
+    border: 1px solid hsl(var(--border));
+    color: hsl(var(--white));
   }
   &[disabled] {
-    background: $gray;
-    border: 1px solid $border;
-    @include light-clr;
+    background: hsl(var(--light));
+    border: 1px solid hsl(var(--border));
+    color: hsl(var(--white));
   }
 }
 .input-group-text {
-  border: 1px solid $border;
+  border: 1px solid hsl(var(--border));
   border-right: none;
-  background: $light;
+  background: hsl(var(--light));
 }

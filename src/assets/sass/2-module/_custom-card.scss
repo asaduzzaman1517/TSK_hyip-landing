@@ -1,11 +1,11 @@
 .custom--card {
     border-radius: 3px;
-    @include light-bg;
-    border: 1px solid $border;
+    background-color: hsl(var(--white));
+    border: 1px solid hsl(var(--border));
     .card-header {
         padding: 1rem 1.5rem;
-        background: $light;
-        border-bottom: 1px solid $border;
+        background: hsl(var(--light));
+        border-bottom: 1px solid hsl(var(--border));
     }
     .card-title {
         margin-top: 0;
@@ -19,35 +19,35 @@
     }
     .card-footer {
         padding: 1rem 1.5rem;
-        background: $light;
-        border-top: 1px solid $border;
+        background: hsl(var(--light));
+        border-top: 1px solid hsl(var(--border));
     }
 }
 .custom--card-dark {
     border-radius: 3px;
-    background: lighten($accent-clr, 10%);
-    border: 1px solid lighten($accent-clr, 15%);
+    background: hsl(var(--accent-200));
+    border: 1px solid hsl(var(--accent-300));
     .card-header {
         padding: 1rem 1.5rem;
-        background: rgba($accent-clr, .5);
-        border-bottom: 1px solid lighten($accent-clr, 15%);
-        @include light-clr;
+        background: hsl(var(--accent)/.5);
+        border-bottom: 1px solid hsl(var(--accent-300));
+        color: hsl(var(--white));
     }
     .card-title {
         margin-top: 0;
         margin-bottom: 0;
-        @include light-clr;
+        color: hsl(var(--white));
     }
     .card-text {
         margin-top: 1rem;
-        @include light-clr;
+        color: hsl(var(--white));
     }
     .card-body {
         padding: 2rem 1.5rem;
     }
     .card-footer {
         padding: 1rem 1.5rem;
-        background: rgba($accent-clr, .5);
-        border-top: 1px solid lighten($accent-clr, 15%);
+        background: hsl(var(--accent)/.5);
+        border-top: 1px solid hsl(var(--accent-300));
     }
 }

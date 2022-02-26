@@ -4,14 +4,14 @@
     margin-right: 1rem;
     &.active {
       .page-link {
-        @include base-bg;
-        @include base-border;
+        background-color: rgb(var(--base));
+        border: 1px solid rgb(var(--base));
       }
     }
     &.disabled {
       .page-link {
-        background: lighten($accent-clr, 15%);
-        border-color: lighten($accent-clr, 15%);
+        background: hsl(var(--accent-300));
+        border-color: hsl(var(--accent-300));
       }
     }
     &:last-child {
@@ -40,15 +40,15 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    @include base-border;
-    @include base-clr;
+    border: 1px solid rgb(var(--base));
+    color: rgb(var(--base));
     text-align: center;
     font-size: 14px;
     background: transparent;
     &:hover {
-      @include base-bg;
-      @include base-border;
-      @include light-clr;
+      background-color: rgb(var(--base));
+      border: 1px solid rgb(var(--base));
+      color: hsl(var(--white));
     }
   }
 }

@@ -1,13 +1,13 @@
 .custom--check {
     border-radius: 1px !important;
-    border: 1px solid $border;
-    background: $light;
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--light));
     &:checked {
-        @include base-bg;
-        @include base-border(1px, .5);
+        background-color: rgb(var(--base));
+        border: 1px solid rgb(var(--base)/.5);
     }
     &:focus {
-        @include base-border(1px, .5);
+        border: 1px solid rgb(var(--base)/.5);
         box-shadow: none;
     }
 }

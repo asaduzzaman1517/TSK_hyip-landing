@@ -6,7 +6,7 @@
     border-radius: 0 !important;
     margin-bottom: 15px;
     background: transparent;
-    color: $text-clr;
+    color: hsl(var(--text));
     border: 0;
     &:last-child {
       margin-bottom: 0;
@@ -15,14 +15,14 @@
   .accordion-button {
     padding: 10px 20px;
     border-radius: 3px;
-    border: 1px solid lighten($accent-clr, 15%);
-    background: $accent-clr !important;
-    @include light-clr;
-    font-family: $body-font;
+    border: 1px solid hsl(var(--accent-300));
+    background: hsl(var(--accent));
+    color: hsl(var(--white));
+    font-family: var(--body-font);
     font-size: 18px;
     font-weight: 500;
     &:focus {
-      border-color: $border;
+      border-color: hsl(var(--border));
       box-shadow: none;
     }
     &[aria-expanded="true"] {
@@ -42,32 +42,32 @@
       width: 40px;
       height: 40px;
       border-radius: 3px;
-      @include base-bg;
+      background-color: rgb(var(--base));
       text-align: center;
       background-image: initial !important;
       transform: rotate(0deg) !important;
       font-family: "Line Awesome Free";
       font-weight: 900;
       font-size: 24px;
-      @include light-clr;
+      color: hsl(var(--white));
       line-height: 1;
     }
   }
   .accordion-button:not(.collapsed) {
-    @include base-border;
-    @include base-bg;
+    border: 1px solid rgb(var(--base));
+    background-color: rgb(var(--base));
     background-image: initial !important;
     box-shadow: inset 0 0 0 transparent !important;
-    @include light-clr;
+    color: hsl(var(--white));
     &::after {
-      background: lighten($accent-clr, 15%);
-      @include light-clr;
+      background: hsl(var(--accent-300));
+      color: hsl(var(--white));
     }
   }
   .accordion-body {
     margin-top: 15px;
     border-radius: 5px;
-    background: $accent-clr;
-    @include light-clr;
+    background: hsl(var(--accent));
+    color: hsl(var(--white));
   }
 }

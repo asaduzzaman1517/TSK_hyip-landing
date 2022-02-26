@@ -3,21 +3,21 @@
 .custom--table {
   margin-bottom: 0;
   border-radius: 10px;
-  @include base-shadow(0, 5px, 15px, 0, .25);
-  background: $accent-clr;
+  box-shadow: 0 5px 15px rgb(var(--base)/.25);
+  background: hsl(var(--accent));
   & > :not(:first-child) {
-    @include base-border-top(1px, 1);
+    border-top: 1px solid rgb(var(--base));
   }
   & > :not(caption) > * > * {
     border-bottom-width: 0;
   }
   thead {
-    @include base-bg;
+    background-color: rgb(var(--base));
 
     th {
       padding: 0.75rem 1.25rem;
-      font-family: $heading-font;
-      @include light-clr;
+      font-family: var(--heading-font);
+      color: hsl(var(--white));
       text-transform: uppercase;
       text-align: center;
       font-weight: 500;
@@ -38,10 +38,10 @@
   tbody {
     td {
       border-top: none;
-      @include base-border-bottom(1px, .3);
+      border-bottom: 1px solid rgb(var(--base)/.3);
       padding: 15px 20px;
-      font-family: $heading-font;
-      @include light-clr;
+      font-family: var(--heading-font);
+      color: hsl(var(--white));
       text-align: center;
       vertical-align: middle;
 
@@ -68,7 +68,7 @@
       left: 0;
       padding: 0.8125rem 0.9375rem;
       display: none;
-      @include light-clr;
+      color: hsl(var(--white));
     }
   }
 }
@@ -81,11 +81,11 @@
 
     tbody tr {
       &:nth-child(odd) {
-        background-color: lighten($accent-clr, 5%);
+        background-color: hsl(var(--accent-400));
       }
 
       &:last-child td {
-        @include base-border-top(1px .25);
+        border-top: 1px solid rgb(var(--base)/.25);
       }
 
       td {
@@ -127,7 +127,7 @@
 
     tbody tr {
       &:nth-child(odd) {
-        background-color: lighten($accent-clr, 5%);
+        background-color: hsl(var(--accent-400));
       }
 
       td {
@@ -145,7 +145,7 @@
         display: block;
         padding-left: 45% !important;
         text-align: right !important;
-        @include base-border-bottom(1px , .25);
+        border-bottom: 1px solid rgb(var(--base)/.25);
       }
 
       th:first-child,

@@ -1,23 +1,23 @@
 .custom--modal {
     .modal-content {
       border-radius: 5px;
-      @include light-bg;
-      border: 1px solid $border;
+      background-color: hsl(var(--white));
+      border: 1px solid hsl(var(--border));
     }
     .modal-title {
       margin-top: 0;
-      color: $heading-clr;
+      color: hsl(var(--heading));
     }
     .btn-close {
       position: relative;
       background: transparent;
-      color: $accent-clr;
+      color: hsl(var(--accent));
       opacity: 1;
       transition: all .3s ease;
       &:hover {
         outline: none;
         box-shadow: none;
-        @include base-clr;
+        color: rgb(var(--base));
       }
       &::after {
         content: "\f00d";
@@ -36,35 +36,35 @@
         }
     }
     .modal-header {
-      border-bottom: 1px solid $border;
-      background: $light;
+      border-bottom: 1px solid hsl(var(--border));
+      background: hsl(var(--light));
     }
     .modal-footer {
-      border-top: 1px solid $border;
-      background: $light;
+      border-top: 1px solid hsl(var(--border));
+      background: hsl(var(--light));
     }
   }
   
   .custom--modal-dark {
     .modal-content {
       border-radius: 5px;
-      background: lighten($accent-clr, 15%);
-      border: 1px solid lighten($accent-clr, 25%);
+      background: hsl(var(--accent-300));
+      border: 1px solid hsl(var(--accent-50));
     }
     .modal-title {
       margin-top: 0;
-      @include light-clr;
+      color: hsl(var(--white));
     }
     .btn-close {
       position: relative;
       background: transparent;
-      @include light-clr;
+      color: hsl(var(--white));
       opacity: 1;
       transition: all .3s ease;
       &:hover {
         outline: none;
         box-shadow: none;
-        @include base-clr;
+        color: rgb(var(--base));
       }
       &::after {
         content: "\f00d";
@@ -78,15 +78,15 @@
       }
     }
     .modal-body {
-        @include light-clr;
+        color: hsl(var(--white));
     }
     .modal-header {
-      border-bottom: 1px solid lighten($accent-clr, 25%);
-      background: lighten($accent-clr, 13%);
+      border-bottom: 1px solid hsl(var(--accent-50));
+      background: hsl(var(--accent-300));
     }
     .modal-footer {
-      border-top: 1px solid lighten($accent-clr, 25%);
-      background: lighten($accent-clr, 13%);
+      border-top: 1px solid hsl(var(--accent-50));
+      background: hsl(var(--accent-300));
     }
   }
   

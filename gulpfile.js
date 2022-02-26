@@ -1,7 +1,7 @@
 
 const gulp = require('gulp');
 const { series } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const cssbeautify = require('gulp-cssbeautify');
 const fileinclude = require('gulp-file-include');

@@ -1,82 +1,82 @@
 .btn {
-    font-family: $heading-font;
+  font-family: var(--heading-font);
     font-weight: 500;
     transition: all 0.3s ease;
     border-radius: 3px;
     &:hover {
-      box-shadow: 0 8px 15px rgba($dark, 0.4);
+      box-shadow: 0 8px 15px hsl(var(--dark)/.4);
     }
     // Color Option
     &--primary {
-      background: $primary;
-      @include light-clr;
+      background: hsl(var(--primary));
+      color: hsl(var(--white));
       &:hover {
-        @include light-clr;
-        background: darken($primary, 3%);
+        color: hsl(var(--white));
+        background: hsl(var(--primary));
       }
     }
     &--secondary {
-      background: $secondary;
-      @include light-clr;
+      background: hsl(var(--secondary));
+      color: hsl(var(--white));
       &:hover {
-        @include light-clr;
-        background: darken($secondary, 3%);
+        color: hsl(var(--white));
+        background: hsl(var(--secondary));
       }
     }
     &--success {
-      background: $success;
-      @include light-clr;
+      background: hsl(var(--success));
+      color: hsl(var(--white));
       &:hover {
-        @include light-clr;
-        background: darken($success, 3%);
+        color: hsl(var(--white));
+        background: hsl(var(--success));
       }
     }
     &--danger {
-      background: $danger;
-      @include light-clr;
+      background: hsl(var(--danger));
+      color: hsl(var(--white));
       &:hover {
-        @include light-clr;
-        background: darken($danger, 3%);
+        color: hsl(var(--white));
+        background: hsl(var(--danger));
       }
     }
     &--warning {
-      background: $warning;
-      @include light-clr;
+      background: hsl(var(--warning));
+      color: hsl(var(--white));
       &:hover {
-        @include light-clr;
-        background: darken($warning, 3%);
+        color: hsl(var(--white));
+        background: hsl(var(--warning));
       }
     }
     &--info {
-      background: $info;
-      @include light-clr;
+      background: hsl(var(--info));
+      color: hsl(var(--white));
       &:hover {
-        @include light-clr;
-        background: darken($info, 3%);
+        color: hsl(var(--white));
+        background: hsl(var(--info));
       }
     }
     &--dark {
-      background: $dark;
-      @include light-clr;
+      background: hsl(var(--dark));
+      color: hsl(var(--white));
       &:hover {
-        @include light-clr;
-        background: darken($dark, 3%);
+        color: hsl(var(--white));
+        background: hsl(var(--dark));
       }
     }
     &--light {
-      @include light-bg;
-      color: $primary;
+      background-color: hsl(var(--white));
+      color: hsl(var(--primary));
       &:hover {
-        @include light-clr;
-        background: $dark;
+        color: hsl(var(--white));
+        background: hsl(var(--dark));
       }
     }
     &--base {
-      @include base-bg;
-      @include light-clr;
+      background: rgb(var(--base));
+      color: hsl(var(--white));
       &:hover {
-        @include light-clr;
-        @include base-bg;
+        color: hsl(var(--white));
+        background: rgb(var(--base));
       }
     }
     // Button  Shape
@@ -103,17 +103,17 @@
     }
     // Button Outline
     &--outline {
-      border: 1px solid $border;
+      border: 1px solid hsl(var(--border));
       background: transparent;
       &:hover {
-        @include light-clr;
-        background: $primary;
-        border-color: $primary;
+        color: hsl(var(--white));
+        background: hsl(var(--primary));
+        border-color: hsl(var(--primary));
       }
       &.active {
-        @include light-clr;
-        background: $primary;
-        border-color: $primary;
+        color: hsl(var(--white));
+        background: hsl(var(--primary));
+        border-color: hsl(var(--primary));
       }
     }
     // Custom Button
@@ -123,16 +123,16 @@
       padding-left: 30px;
       padding-right: 30px;
       background: transparent;
-      @include base-border(2px);
-      @include base-clr;
+      border: 2px solid rgb(var(--base));
+      color: rgb(var(--base));
       &:hover {
-        @include base-clr;
-        @include light-bg;
-        @include base-border(2px);
+        color: rgb(var(--base));
+        background-color: hsl(var(--white));
+        border: 2px solid rgb(var(--base));
       }
       &.active {
-        @include base-bg;
-        @include light-clr;
+        background-color: rgb(var(--base));
+        color: hsl(var(--white));
       }
     }
   }

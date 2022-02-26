@@ -1,8 +1,8 @@
 .t-heading-font {
-  font-family: $heading-font;
+  font-family: var(--heading-font);
 }
 .t-body-font {
-  font-family: $body-font;
+  font-family: var(--body-font);
 }
 
 .t-link {
@@ -13,32 +13,32 @@
   }
   &--primary {
     &:hover {
-      color: $primary;
+      color: hsl(var(--primary));
     }
   }
   &--danger {
     &:hover {
-      color: $danger;
+      color: hsl(var(--danger));
     }
   }
   &--info {
     &:hover {
-      color: $info;
+      color: hsl(var(--info));
     }
   }
   &--light {
     &:hover {
-      @include light-clr;
+      color: hsl(var(--white));
     }
   }
   &--base {
     &:hover {
-      @include base-clr;
+      color: rgb(var(--base));
     }
   }
   &--accent {
     &:hover {
-      color: $accent-clr;
+      color: hsl(var(--accent));
     }
   }
 }

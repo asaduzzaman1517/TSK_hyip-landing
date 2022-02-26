@@ -1,13 +1,13 @@
 //Animation
 @keyframes btnVideo {
   0% {
-    box-shadow: 0 0 0 0 $warning;
+    box-shadow: 0 0 0 0 hsl(var(--warning));
   }
   50% {
-    box-shadow: 0 0 0 10px rgba($warning, 0.3);
+    box-shadow: 0 0 0 10px hsl(var(--warning)/.3);
   }
   100% {
-    box-shadow: 0 0 0 20px rgba($warning, 0.04);
+    box-shadow: 0 0 0 20px hsl(var(--warning)/.04);
   }
 }
 //Circle

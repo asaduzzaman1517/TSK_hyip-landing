@@ -2,7 +2,7 @@
     li {
         margin-right: -25px;
         .user__img {
-            @include dark-shadow(0, 0, 8px, 0, .5);
+            box-shadow: 0 0 8px hsl(var(--black)/.5);
         }
     }
 }

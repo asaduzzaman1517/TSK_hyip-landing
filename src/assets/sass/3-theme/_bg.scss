@@ -1,63 +1,30 @@
 .bg--primary {
-  background: $primary;
+  background: hsl(var(--primary));
 }
 .bg--secondary {
-  background: $secondary;
+  background: hsl(var(--secondary));
 }
 .bg--success {
-  background: $success;
+  background:hsl(var(--success));
 }
 .bg--danger {
-  background: $danger;
+  background: hsl(var(--danger));
 }
 .bg--warning {
-  background: $warning;
+  background: hsl(var(--warning));
 }
 .bg--info {
-  background: $info;
+  background: hsl(var(--info));
 }
 .bg--dark {
-  background: $dark;
+  background: hsl(var(--dark));
 }
 .bg--light {
-  @include light-bg;
+  background-color: hsl(var(--white));
 }
 .bg--base {
-  @include base-bg;
+  background-color: rgb(var(--base));
 }
 .bg--accent {
-  background: $accent-clr;
-}
-.bg--accent-50 {
-  background: rgba($accent-clr, .05);
-}
-.bg--accent-100 {
-  background: rgba($accent-clr, .1);
-}
-.bg--accent-200 {
-  background: rgba($accent-clr, .2);
-}
-.bg--accent-300 {
-  background: rgba($accent-clr, .3);
-}
-.bg--accent-500 {
-  background: rgba($accent-clr, .5);
-}
-.bg--accent-600 {
-  background: rgba($accent-clr, .6);
-}
-.bg--accent-700 {
-  background: rgba($accent-clr, .7);
-}
-.bg--accent-800 {
-  background: rgba($accent-clr, .8);
-}
-.bg--accent-900 {
-  background: rgba($accent-clr, .9);
-}
-.bg--accent-dark {
-  background: darken($accent-clr, 5%);
-}
-.bg--accent-light {
-  background: lighten($accent-clr, 8%);
+  background: hsl(var(--accent));
 }

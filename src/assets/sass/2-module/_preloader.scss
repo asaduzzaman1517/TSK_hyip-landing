@@ -3,7 +3,7 @@
   display: grid;
   place-items: center;
   height: 100vh;
-  background-color: $dark;
+  background-color: hsl(var(--dark));
   position: fixed;
   top: 0;
   bottom: 0;
@@ -37,8 +37,8 @@
     width: var(--loader-part-size);
     height: var(--loader-part-size);
 
-    @include base-bg;
-    @include base-shadow(0, 0, 6px, 0, 1);
+    background-color: rgb(var(--base));
+    box-shadow: 0 0 6px rgb(var(--base));
 
     transform-origin: center center;
 

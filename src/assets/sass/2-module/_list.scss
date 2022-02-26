@@ -70,7 +70,7 @@
         content: "\f00c";
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
-        @include light-clr;
+        color: hsl(var(--white));
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -80,7 +80,7 @@
         line-height: 20px;
         border-radius: 50%;
         margin-right: 14px;
-        background: $primary;
+        background: hsl(var(--primary));
       }
     }
   }
@@ -93,7 +93,7 @@
         content: "\f00c";
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
-        @include light-clr;
+        color: hsl(var(--white));
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -103,7 +103,7 @@
         line-height: 20px;
         border-radius: 50%;
         margin-right: 14px;
-        @include base-bg;
+        background-color: rgb(var(--base));
       }
     }
   }

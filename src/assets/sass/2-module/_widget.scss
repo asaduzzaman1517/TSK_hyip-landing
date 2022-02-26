@@ -1,9 +1,10 @@
 .widget {
     padding: 30px 15px;
     border-radius: 15px;
-    @include base-border-y(4px, 1);
-    @include light-bg;
-    @include dark-shadow(0, 15px, 30px, 0, .2);
+    border-top: 4px solid rgb(var(--base));
+    border-bottom: 4px solid rgb(var(--base));
+    background-color: hsl(var(--white));
+    box-shadow: 0 15px 30px hsl(var(--black)/.2);
     @include xlii-screen {
         padding: 40px 30px;
     }
@@ -14,10 +15,10 @@
         &__head {
             padding: 15px 30px;
             border-radius: 5px 5px 0 0;
-            background: $primary;
+            background: hsl(var(--primary));
         }
         &__body  {
-            background: $light;
+            background: hsl(var(--light));
             padding: 15px 30px;
         }
     }

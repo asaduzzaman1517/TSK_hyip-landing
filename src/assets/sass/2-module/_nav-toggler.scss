@@ -8,8 +8,8 @@
             top: auto;
         }
         &--toggle {
-            @include light-bg;
-            color: $text-clr;
+            background-color: hsl(var(--white));
+            color: hsl(var(--text));
         }
     }
 }
