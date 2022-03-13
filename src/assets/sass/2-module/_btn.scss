@@ -1,139 +1,144 @@
 .btn {
   font-family: var(--heading-font);
-    font-weight: 500;
-    transition: all 0.3s ease;
-    border-radius: 3px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  flex-shrink: 0;
+  &:hover {
+    box-shadow: 0 8px 15px hsl(var(--dark) / 0.4);
+  }
+  // Color Option
+  &--primary {
+    background: hsl(var(--primary));
+    color: hsl(var(--white));
     &:hover {
-      box-shadow: 0 8px 15px hsl(var(--dark)/.4);
-    }
-    // Color Option
-    &--primary {
+      color: hsl(var(--white));
       background: hsl(var(--primary));
-      color: hsl(var(--white));
-      &:hover {
-        color: hsl(var(--white));
-        background: hsl(var(--primary));
-      }
     }
-    &--secondary {
+  }
+  &--secondary {
+    background: hsl(var(--secondary));
+    color: hsl(var(--white));
+    &:hover {
+      color: hsl(var(--white));
       background: hsl(var(--secondary));
-      color: hsl(var(--white));
-      &:hover {
-        color: hsl(var(--white));
-        background: hsl(var(--secondary));
-      }
     }
-    &--success {
+  }
+  &--success {
+    background: hsl(var(--success));
+    color: hsl(var(--white));
+    &:hover {
+      color: hsl(var(--white));
       background: hsl(var(--success));
-      color: hsl(var(--white));
-      &:hover {
-        color: hsl(var(--white));
-        background: hsl(var(--success));
-      }
     }
-    &--danger {
+  }
+  &--danger {
+    background: hsl(var(--danger));
+    color: hsl(var(--white));
+    &:hover {
+      color: hsl(var(--white));
       background: hsl(var(--danger));
-      color: hsl(var(--white));
-      &:hover {
-        color: hsl(var(--white));
-        background: hsl(var(--danger));
-      }
     }
-    &--warning {
+  }
+  &--warning {
+    background: hsl(var(--warning));
+    color: hsl(var(--white));
+    &:hover {
+      color: hsl(var(--white));
       background: hsl(var(--warning));
-      color: hsl(var(--white));
-      &:hover {
-        color: hsl(var(--white));
-        background: hsl(var(--warning));
-      }
     }
-    &--info {
+  }
+  &--info {
+    background: hsl(var(--info));
+    color: hsl(var(--white));
+    &:hover {
+      color: hsl(var(--white));
       background: hsl(var(--info));
-      color: hsl(var(--white));
-      &:hover {
-        color: hsl(var(--white));
-        background: hsl(var(--info));
-      }
     }
-    &--dark {
+  }
+  &--dark {
+    background: hsl(var(--dark));
+    color: hsl(var(--white));
+    &:hover {
+      color: hsl(var(--white));
       background: hsl(var(--dark));
+    }
+  }
+  &--light {
+    background-color: hsl(var(--white));
+    color: hsl(var(--primary));
+    &:hover {
       color: hsl(var(--white));
-      &:hover {
-        color: hsl(var(--white));
-        background: hsl(var(--dark));
-      }
+      background: hsl(var(--dark));
     }
-    &--light {
-      background-color: hsl(var(--white));
-      color: hsl(var(--primary));
-      &:hover {
-        color: hsl(var(--white));
-        background: hsl(var(--dark));
-      }
+  }
+  &--base {
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    background: rgb(var(--base));
+    color: hsl(var(--white));
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(
+        to right,
+        hsl(var(--accent-400) / 0.1),
+        hsl(var(--canvas-400) / 0.1)
+      );
+      border-radius: 50%;
+      z-index: -1;
     }
-    &--base {
-      background: rgb(var(--base));
+    &::before {
+      left: -20px;
+      transform: translate(-50%, -50%);
+    }
+    &::after {
+      right: -20px;
+      transform: translate(50%, -50%);
+    }
+    &:hover {
       color: hsl(var(--white));
-      &:hover {
-        color: hsl(var(--white));
-        background: rgb(var(--base));
+      border: 1px solid transparent;
+      &::before {
+        -webkit-animation: criss-cross-left 0.8s both;
+        animation: criss-cross-left 0.8s both;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
       }
-    }
-    // Button  Shape
-    &--sqr {
-      line-height: 1;
-      padding: 0.75rem;
-      font-size: 20px;
-    }
-    // Button Size
-    &--sm {
-      padding: 0.3rem 1rem; //8px X 16px
-    }
-    &--md {
-      padding: 0.5rem 1rem; //8px X 16px
-    }
-    &--lg {
-      padding: 0.625rem 1.25rem; //10px X 20px
-    }
-    &--xl {
-      padding: 0.75rem 1.5rem; //12px X 24px
-    }
-    &--xxl {
-      padding: 1rem 2rem; //16px X 24px
-    }
-    // Button Outline
-    &--outline {
-      border: 1px solid hsl(var(--border));
-      background: transparent;
-      &:hover {
-        color: hsl(var(--white));
-        background: hsl(var(--primary));
-        border-color: hsl(var(--primary));
-      }
-      &.active {
-        color: hsl(var(--white));
-        background: hsl(var(--primary));
-        border-color: hsl(var(--primary));
-      }
-    }
-    // Custom Button
-    &--custom {
-      padding-top: 8px;
-      padding-bottom: 8px;
-      padding-left: 30px;
-      padding-right: 30px;
-      background: transparent;
-      border: 2px solid rgb(var(--base));
-      color: rgb(var(--base));
-      &:hover {
-        color: rgb(var(--base));
-        background-color: hsl(var(--white));
-        border: 2px solid rgb(var(--base));
-      }
-      &.active {
-        background-color: rgb(var(--base));
-        color: hsl(var(--white));
+      &::after {
+        -webkit-animation: criss-cross-right 0.8s both;
+        animation: criss-cross-right 0.8s both;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
       }
     }
   }
-  
+  // Button  Shape
+  &--sqr {
+    line-height: 1;
+    padding: 0.75rem;
+    font-size: 20px;
+  }
+  // Button Size
+  &--sm {
+    padding: 0.3rem 1rem; //8px X 16px
+  }
+  &--md {
+    padding: 0.5rem 1rem; //8px X 16px
+  }
+  &--lg {
+    padding: 0.625rem 1.25rem; //10px X 20px
+  }
+  &--xl {
+    padding: 0.75rem 1.5rem; //12px X 24px
+  }
+  &--xxl {
+    padding: 1rem 2rem; //16px X 24px
+  }
+}

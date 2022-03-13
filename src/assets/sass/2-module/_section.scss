@@ -17,6 +17,17 @@
   &__para {
     max-width: 60ch;
   }
+  &__title {
+    span {
+      background: linear-gradient(
+        to right,
+        hsl(var(--danger)),
+        hsl(var(--canvas-900))
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
   &__subtitle {
     display: inline-block;
     position: relative;
@@ -33,7 +44,7 @@
       top: 50%;
       left: calc(100% + 10px);
       transform: translateY(-50%);
-      background-color: rgb(var(--base)/.5);
+      background-color: rgb(var(--base) / 0.5);
     }
     &::before {
       content: "";

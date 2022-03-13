@@ -1,6 +1,6 @@
 .widget-category {
     &__item {
-        border-bottom: 1px dashed rgba(var(--r), var(--g), var(--b), .5);
+        border-bottom: 1px dashed rgb(var(--base));
         &:last-child {
             border-bottom: none;
             .vh-widget-category__link {

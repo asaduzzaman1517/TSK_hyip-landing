@@ -5,22 +5,11 @@
     @include lg-screen {
         padding: 0;
     }
-    &__top {
-        padding: 13px 45px;
-        position: relative;
-        background: hsl(var(--light));
-            @include lg-screen {
-                padding: 12px  25px;
-            }
-            @include xl-screen {
-                padding: 12px  45px;
-            }
-    }
     &--primary {
         padding: 10px 0;
         position: absolute;
         width: 100%;
-        background: rgba(var(--dark-r), var(--dark-g), var(--dark-b), .5);
+        background: hsl(var(--accent-600)/.3);
         z-index: 10;
         transition: all .3s ease;
     }

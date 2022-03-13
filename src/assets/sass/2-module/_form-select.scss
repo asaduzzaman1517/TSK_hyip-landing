@@ -1,82 +1,39 @@
-.form--select-light {
-  position: relative;
-  isolation: isolate;
-  border: 1px solid hsl(var(--border));
-  border-radius: 3px;
-  background: hsl(var(--light));
-
-  &::after {
-    content: "\f107";
-    font-family: "Line Awesome Free";
-    font-weight: 900;
-    position: absolute;
-    color: hsl(var(--accent));
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.75rem;
-    z-index: -1;
-  }
-  .form--select {
-    color: hsl(var(--accent));
-  }
-  .form--select-sm {
-    color: hsl(var(--accent));
-  }
-}
-.form--select-dark {
-  position: relative;
-  isolation: isolate;
-  border-radius: 3px;
-  border: 1px solid hsl(var(--accent-300));
-  background: hsl(var(--accent));
-
-  &::after {
-    content: "\f107";
-    font-family: "Line Awesome Free";
-    font-weight: 900;
-    position: absolute;
-    color: hsl(var(--white));
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.75rem;
-    z-index: -1;
-  }
-  .form--select {
-    color: hsl(var(--white));
-  }
-  .form--select-sm {
-    color: hsl(var(--white));
-  }
-}
 .form--select {
-  height: 50px;
-  border-radius: 3px;
-  border-radius: 2px;
-  background: transparent;
-  border: none;
-  
   position: relative;
-  font-size: 0.875rem;
-  &:focus {
-    border: none;
-    background: transparent;
-    box-shadow: none;
-    z-index: -1;
+  isolation: isolate;
+  &::before {
+    content: "\f107";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    color: hsl(var(--accent-100));
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 100%;
+    background: rgb(var(--base));
+    display: grid;
+    place-items: center;
+    padding-inline: 15px;
+    border-radius: 0 0.25rem 0.25rem 0;
+    pointer-events: none;
+    z-index: 1;
   }
-  &-sm {
+  .form-select {
+    height: 50px;
     border-radius: 3px;
-    border-radius: 2px;
-    border: none;
-    background: transparent;
+    padding-right: 46px;
     font-size: 0.875rem;
-    position: relative;
+    font-weight: 500;
+    border: 1px solid hsl(var(--accent-400) / 0.3);
+    background: hsl(var(--accent-700));
+    color: hsl(var(--accent-200));
     &:focus {
-      border: none;
-      background: inherit;
+      outline: none;
+      border: 1px solid hsl(var(--accent-400) / 0.3);
+      background: hsl(var(--accent-600));
       box-shadow: none;
-      z-index: -1;
+      color: hsl(var(--accent-100));
     }
   }
 }

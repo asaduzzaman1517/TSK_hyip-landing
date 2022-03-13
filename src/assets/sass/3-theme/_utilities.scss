@@ -21,6 +21,11 @@
       color: hsl(var(--danger));
     }
   }
+  &--success {
+    &:hover {
+      color: hsl(var(--success));
+    }
+  }
   &--info {
     &:hover {
       color: hsl(var(--info));

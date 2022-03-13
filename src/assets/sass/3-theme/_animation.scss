@@ -4,10 +4,10 @@
     box-shadow: 0 0 0 0 hsl(var(--warning));
   }
   50% {
-    box-shadow: 0 0 0 10px hsl(var(--warning)/.3);
+    box-shadow: 0 0 0 10px hsl(var(--warning) / 0.3);
   }
   100% {
-    box-shadow: 0 0 0 20px hsl(var(--warning)/.04);
+    box-shadow: 0 0 0 20px hsl(var(--warning) / 0.04);
   }
 }
 //Circle
@@ -97,21 +97,83 @@
     transform: translateY(0) translateX(-50%);
   }
 }
-// Heart Beat 
+// Heart Beat
 @keyframes heartBeat {
   0% {
-    outline: 0 solid rgba(var(--r),var(--g),var(--b), .5);
+    outline: 0 solid rgba(var(--r), var(--g), var(--b), 0.5);
   }
   25% {
-    outline: 5px solid rgba(var(--r),var(--g),var(--b), .5);
+    outline: 5px solid rgba(var(--r), var(--g), var(--b), 0.5);
   }
   50% {
-    outline: 10px solid rgba(var(--r),var(--g),var(--b), .5);
+    outline: 10px solid rgba(var(--r), var(--g), var(--b), 0.5);
   }
   75% {
-    outline: 5px solid rgba(var(--r),var(--g),var(--b), .5);
+    outline: 5px solid rgba(var(--r), var(--g), var(--b), 0.5);
   }
   100% {
-    outline: 0 solid rgba(var(--r),var(--g),var(--b), .5);
+    outline: 0 solid rgba(var(--r), var(--g), var(--b), 0.5);
+  }
+}
+// Button Effects
+@-webkit-keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+@-webkit-keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+@keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
   }
 }

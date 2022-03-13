@@ -1,5 +1,6 @@
 .primary-menu {
   flex-direction: column;
+  gap: 0;
   @include lg-screen {
     flex-direction: row;
   }
@@ -31,7 +32,7 @@
           border-bottom: 1px solid transparent;
           @include lg-screen {
             border-bottom: none;
-            color: rgb(var(--base));
+            color: hsl(var(--accent-200));
           }
           &::after {
             @include lg-screen {
@@ -82,13 +83,13 @@
       color: hsl(var(--white));
       margin-left: 0;
       margin-right: 0;
-      font-weight: 700;
+      font-weight: 500;
       border-bottom: none;
       padding-top: 20px;
       padding-bottom: 20px;
     }
     &:hover {
-      color: rgb(var(--base));
+      color: hsl(var(--accent-200));
       text-decoration: none;
     }
   }
@@ -183,7 +184,7 @@
       position: relative;
       @include lg-screen {
         background-color: hsl(var(--white));
-        color: hsl(var(--heading));
+        color: hsl(var(--accent-600));
         border-radius: 3px !important;
         text-align: center;
       }

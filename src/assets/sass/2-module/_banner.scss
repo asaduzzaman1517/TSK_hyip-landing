@@ -13,7 +13,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(to right, rgba(var(--dark-r), var(--dark-g), var(--dark-b), 0.8), rgba(var(--dark-r), var(--dark-g), var(--dark-b), 0.5));
+    background: hsl(var(--black)/.5);
     mix-blend-mode: darken;
     z-index: -1;
   }
