@@ -64,8 +64,8 @@
   --info: 188 92% 45%;
   --dark: 225 23% 17%;
 
-  --text: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 70%);
-  --heading: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 70%);
+  --text: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 15%);
+  --heading: var(--accent-h) var(--accent-s) var(--accent-l);
   --border: 0 0% 88%;
   --light: 210 33% 98%;
 }
@@ -76,7 +76,7 @@ html {
 
 body {
   position: relative;
-  background: hsl(var(--accent));
+  background: hsl(var(--white));
   font-family: var(--body-font);
   font-size: 1rem;
   font-weight: 400;

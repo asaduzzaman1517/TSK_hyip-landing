@@ -13,11 +13,11 @@
     }
   }
   .accordion-button {
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 3px;
-    border: 1px solid hsl(var(--accent-300));
-    background: hsl(var(--accent));
-    color: hsl(var(--white));
+    border: 1px solid hsl(var(--border)/.5);
+    background: hsl(var(--light));
+    color: rgb(var(--base));
     font-family: var(--body-font);
     font-size: 18px;
     font-weight: 500;
@@ -39,17 +39,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 3px;
-      background-color: rgb(var(--base));
       text-align: center;
       background-image: initial !important;
       transform: rotate(0deg) !important;
       font-family: "Line Awesome Free";
       font-weight: 900;
       font-size: 24px;
-      color: hsl(var(--white));
+      color: rgb(var(--base));
       line-height: 1;
     }
   }
@@ -60,14 +56,13 @@
     box-shadow: inset 0 0 0 transparent !important;
     color: hsl(var(--white));
     &::after {
-      background: hsl(var(--accent-300));
       color: hsl(var(--white));
     }
   }
   .accordion-body {
     margin-top: 15px;
     border-radius: 5px;
-    background: hsl(var(--accent));
-    color: hsl(var(--white));
+    background: hsl(var(--light));
+    color: hsl(var(--text));
   }
 }

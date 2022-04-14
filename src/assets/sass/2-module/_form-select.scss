@@ -1,6 +1,7 @@
 .form--select {
   position: relative;
   isolation: isolate;
+
   &::before {
     content: "\f107";
     font-family: "Line Awesome Free";
@@ -19,21 +20,23 @@
     pointer-events: none;
     z-index: 1;
   }
+
   .form-select {
     height: 50px;
     border-radius: 3px;
     padding-right: 46px;
     font-size: 0.875rem;
     font-weight: 500;
-    border: 1px solid hsl(var(--accent-400) / 0.3);
-    background: hsl(var(--accent-700));
-    color: hsl(var(--accent-200));
+    border: 1px solid hsl(var(--border) / 0.3);
+    background: hsl(var(--light)/.3);
+    color: hsl(var(--heading));
+
     &:focus {
       outline: none;
-      border: 1px solid hsl(var(--accent-400) / 0.3);
-      background: hsl(var(--accent-600));
+      border: 1px solid hsl(var(--border) / 0.3);
+      background: hsl(var(--light)/.3);
+      color: hsl(var(--heading));
       box-shadow: none;
-      color: hsl(var(--accent-100));
     }
   }
 }

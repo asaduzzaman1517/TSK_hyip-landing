@@ -4,40 +4,48 @@
   border-radius: 3px;
   font-size: 14px;
   font-weight: 500;
-  border: 1px solid hsl(var(--accent-400) / 0.3);
-  background: hsl(var(--accent-700));
-  color: hsl(var(--accent-100));
+  border: 1px solid hsl(var(--border) / 0.3);
+  background: hsl(var(--light)/.3);
+  color: hsl(var(--heading));
   transition: all 0.3s ease;
+
   &::placeholder {
-    color: hsl(var(--accent-400));
+    color: hsl(var(--accent-300));
   }
+
   &:focus {
     outline: none;
-    border: 1px solid hsl(var(--accent-400) / 0.3);
-    background: hsl(var(--accent-600));
+    border: 1px solid hsl(var(--border) / 0.3);
+    background: hsl(var(--light)/.3);
+    color: hsl(var(--heading));
     box-shadow: none;
-    color: hsl(var(--accent-100));
   }
+
   &:-webkit-autofill {
-    -webkit-text-fill-color: hsl(var(--accent-100)) !important;
-    -webkit-box-shadow: 0 0 0px 1000px hsl(var(--accent-600)) inset;
+    -webkit-text-fill-color: hsl(var(--heading)) !important;
+    -webkit-box-shadow: 0 0 0px 1000px hsl(var(--light)/.3) inset;
   }
+
   &[readonly] {
-    background: hsl(var(--accent-400));
-    border: 1px solid hsl(var(--accent-400) / 0.3);
-    color: hsl(var(--accent-900));
+    background: hsl(var(--light));
+    border: 1px solid hsl(var(--light));
+    color: hsl(var(--accent-400));
+
     &::placeholder {
-      color: hsl(var(--accent));
+      color: hsl(var(--accent-300));
     }
   }
+
   &[disabled] {
-    background: hsl(var(--accent-400));
-    border: 1px solid hsl(var(--accent-400) / 0.3);
-    color: hsl(var(--accent-900));
+    background: hsl(var(--light));
+    border: 1px solid hsl(var(--light));
+    color: hsl(var(--accent-400));
+
     &::placeholder {
-      color: hsl(var(--accent));
+      color: hsl(var(--accent-300));
     }
   }
+
   &[type="file"] {
     &::-webkit-file-upload-button {
       background: rgb(var(--base)) !important;
@@ -45,6 +53,7 @@
     }
   }
 }
+
 textarea.form--control {
   height: auto;
   line-height: normal;
@@ -52,18 +61,20 @@ textarea.form--control {
   border-radius: 3px;
   font-size: 14px;
   font-weight: 500;
-  border: 1px solid hsl(var(--accent-400) / 0.3);
-  background: hsl(var(--accent-700));
-  color: hsl(var(--accent-100));
+  border: 1px solid hsl(var(--border) / 0.3);
+  background: hsl(var(--light)/.3);
+  color: hsl(var(--heading));
   transition: all 0.3s ease;
+
   &::placeholder {
-    color: hsl(var(--accent-400));
+    color: hsl(var(--accent-300));
   }
+
   &:focus {
     outline: none;
-    border: 1px solid hsl(var(--accent-400) / 0.3);
-    background: hsl(var(--accent-600));
+    border: 1px solid hsl(var(--border) / 0.3);
+    background: hsl(var(--light)/.3);
+    color: hsl(var(--heading));
     box-shadow: none;
-    color: hsl(var(--accent-100));
   }
 }

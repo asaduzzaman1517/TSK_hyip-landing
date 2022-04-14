@@ -1,19 +1,18 @@
 /* table css start */
-
 .custom--table {
   margin-bottom: 0;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgb(var(--base)/.25);
-  background: hsl(var(--accent));
+  box-shadow: 0 5px 10px hsl(var(--black)/.1);
+  background: hsl(var(--light));
   & > :not(:first-child) {
-    border-top: 1px solid rgb(var(--base));
+    border-top: none;
   }
   & > :not(caption) > * > * {
     border-bottom-width: 0;
   }
   thead {
     background-color: rgb(var(--base));
-
+    
     th {
       padding: 0.75rem 1.25rem;
       font-family: var(--heading-font);
@@ -38,10 +37,10 @@
   tbody {
     td {
       border-top: none;
-      border-bottom: 1px solid rgb(var(--base)/.3);
+      border-bottom: 1px solid rgb(var(--base)/.2);
       padding: 15px 20px;
       font-family: var(--heading-font);
-      color: hsl(var(--white));
+      color: hsl(var(--heading));
       text-align: center;
       vertical-align: middle;
 
@@ -68,7 +67,7 @@
       left: 0;
       padding: 0.8125rem 0.9375rem;
       display: none;
-      color: hsl(var(--white));
+      color: hsl(var(--heading));
     }
   }
 }
@@ -81,11 +80,11 @@
 
     tbody tr {
       &:nth-child(odd) {
-        background-color: hsl(var(--accent-400));
+        background-color: hsl(var(--white));
       }
 
       &:last-child td {
-        border-top: 1px solid rgb(var(--base)/.25);
+        border-top: 1px solid rgb(var(--base)/.2);
       }
 
       td {
@@ -115,6 +114,7 @@
 
     [data-label]::before {
       display: block;
+      color: hsl(var(--black));
     }
   }
 }
