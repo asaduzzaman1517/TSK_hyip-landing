@@ -24,7 +24,7 @@
   &__link {
     color: hsl(var(--white));
     &:hover {
-      color: rgb(var(--base));
+      color: hsl(var(--base));
     }
   }
 }

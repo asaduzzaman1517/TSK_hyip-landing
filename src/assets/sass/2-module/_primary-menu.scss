@@ -32,7 +32,7 @@
           border-bottom: 1px solid transparent;
           @include lg-screen {
             border-bottom: none;
-            color: hsl(var(--accent-200));
+            color: hsl(var(--base));
           }
           &::after {
             @include lg-screen {
@@ -89,7 +89,7 @@
       padding-bottom: 20px;
     }
     &:hover {
-      color: hsl(var(--accent-200));
+      color: hsl(var(--base));
       text-decoration: none;
     }
   }
@@ -155,7 +155,7 @@
       }
     }
     &-list {
-      border-bottom: 1px solid rgb(var(--base)/.5);
+      border-bottom: 1px solid hsl(var(--base)/.5);
       @include lg-screen {
         border-bottom: 1px solid hsl(var(--border));
         &:hover {
@@ -178,7 +178,7 @@
     &-link {
       display: block;
       padding: 8px 14px;
-      background-color: rgb(var(--base));
+      background-color: hsl(var(--base));
       color: hsl(var(--white));
       transition: all 0.3s ease;
       position: relative;
@@ -192,7 +192,7 @@
         color: hsl(var(--white));
         @include lg-screen {
           color: hsl(var(--white));
-          background-color: rgb(var(--base));
+          background-color: hsl(var(--base));
         }
       }
     }

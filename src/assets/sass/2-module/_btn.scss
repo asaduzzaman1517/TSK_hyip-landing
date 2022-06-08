@@ -76,7 +76,7 @@
     overflow: hidden;
     position: relative;
     isolation: isolate;
-    background: rgb(var(--base));
+    background: hsl(var(--base));
     color: hsl(var(--white));
 
     &::before,

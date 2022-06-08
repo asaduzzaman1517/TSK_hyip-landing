@@ -37,8 +37,8 @@
     width: var(--loader-part-size);
     height: var(--loader-part-size);
 
-    background-color: rgb(var(--base));
-    box-shadow: 0 0 6px rgb(var(--base));
+    background-color: hsl(var(--base));
+    box-shadow: 0 0 6px hsl(var(--base));
 
     transform-origin: center center;
 

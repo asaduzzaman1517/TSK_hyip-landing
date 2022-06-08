@@ -12,7 +12,7 @@
     right: 0;
     transform: translateY(-50%);
     height: 100%;
-    background: rgb(var(--base));
+    background: hsl(var(--base));
     display: grid;
     place-items: center;
     padding-inline: 15px;

@@ -48,7 +48,7 @@
 
   &[type="file"] {
     &::-webkit-file-upload-button {
-      background: rgb(var(--base)) !important;
+      background: hsl(var(--base)) !important;
       color: hsl(var(--accent-100)) !important;
     }
   }

@@ -4,8 +4,8 @@
     margin-right: 1rem;
     &.active {
       .page-link {
-        background-color: rgb(var(--base));
-        border: 1px solid rgb(var(--base));
+        background-color: hsl(var(--base));
+        border: 1px solid hsl(var(--base));
       }
     }
     &.disabled {
@@ -40,14 +40,14 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid rgb(var(--base));
-    color: rgb(var(--base));
+    border: 1px solid hsl(var(--base));
+    color: hsl(var(--base));
     text-align: center;
     font-size: 14px;
     background: transparent;
     &:hover {
-      background-color: rgb(var(--base));
-      border: 1px solid rgb(var(--base));
+      background-color: hsl(var(--base));
+      border: 1px solid hsl(var(--base));
       color: hsl(var(--white));
     }
   }

@@ -17,7 +17,7 @@
       &:hover {
         outline: none;
         box-shadow: none;
-        color: rgb(var(--base));
+        color: hsl(var(--base));
       }
       &::after {
         content: "\f00d";
@@ -64,7 +64,7 @@
       &:hover {
         outline: none;
         box-shadow: none;
-        color: rgb(var(--base));
+        color: hsl(var(--base));
       }
       &::after {
         content: "\f00d";

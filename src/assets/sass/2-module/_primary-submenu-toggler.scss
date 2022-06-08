@@ -4,13 +4,13 @@
     &.has-sub {
       &.active {
         padding-bottom: 15px;
-        background-color: rgb(var(--base)/.2);
+        background-color: hsl(var(--base)/.2);
         @include lg-screen {
             padding-bottom: 0;
             background: transparent;
         }
         .primary-menu__link {
-          color: rgb(var(--base));
+          color: hsl(var(--base));
           @include lg-screen {
             padding-bottom: 0;
             background: transparent;

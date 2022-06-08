@@ -38,7 +38,7 @@
   }
   &--base {
     &:hover {
-      color: rgb(var(--base));
+      color: hsl(var(--base));
     }
   }
   &--accent {

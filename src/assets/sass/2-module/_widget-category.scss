@@ -1,6 +1,6 @@
 .widget-category {
     &__item {
-        border-bottom: 1px dashed rgb(var(--base));
+        border-bottom: 1px dashed hsl(var(--base));
         &:last-child {
             border-bottom: none;
             .vh-widget-category__link {
@@ -14,7 +14,7 @@
         color: hsl(var(--text));
         transition: all .3s ease;
         &:hover {
-            color: rgb(var(--base));
+            color: hsl(var(--base));
         }
     }
 }

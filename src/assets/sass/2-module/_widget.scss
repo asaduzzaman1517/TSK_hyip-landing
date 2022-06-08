@@ -1,8 +1,8 @@
 .widget {
   padding: 30px 15px;
   border-radius: 15px;
-  border-top: 4px solid rgb(var(--base));
-  border-bottom: 4px solid rgb(var(--base));
+  border-top: 4px solid hsl(var(--base));
+  border-bottom: 4px solid hsl(var(--base));
   background-color: hsl(var(--accent));
   box-shadow: 0 15px 30px hsl(var(--black) / 0.2);
   @include xlii-screen {

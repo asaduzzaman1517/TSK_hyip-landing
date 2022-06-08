@@ -3,7 +3,7 @@
   align-items: center;
   width: 100%;
   max-width: 140px;
-  height: 46px;
+  height: 50px;
   font-size: 24px;
   text-transform: capitalize;
   font-family: var(--heading-font);
@@ -14,8 +14,10 @@
     color: hsl(var(--white));
   }
   @include lg-screen {
-    height: 64px;
     max-width: 160px;
+  }
+  @include xl-screen {
+    max-width: 190px;
   }
   &__is {
     width: 100%;

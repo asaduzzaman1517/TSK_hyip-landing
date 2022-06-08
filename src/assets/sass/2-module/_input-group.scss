@@ -3,9 +3,9 @@
       display: grid;
       place-items: center;
       padding-inline: 15px;
-      border: 1px solid rgb(var(--base) / 0.3);
+      border: 1px solid hsl(var(--base) / 0.3);
       border-right: none;
-      background: rgb(var(--base));
+      background: hsl(var(--base));
       color: hsl(var(--accent-100));
     }
   }

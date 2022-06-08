@@ -17,7 +17,7 @@
     border-radius: 3px;
     border: 1px solid hsl(var(--border)/.5);
     background: hsl(var(--light));
-    color: rgb(var(--base));
+    color: hsl(var(--base));
     font-family: var(--body-font);
     font-size: 18px;
     font-weight: 500;
@@ -45,13 +45,13 @@
       font-family: "Line Awesome Free";
       font-weight: 900;
       font-size: 24px;
-      color: rgb(var(--base));
+      color: hsl(var(--base));
       line-height: 1;
     }
   }
   .accordion-button:not(.collapsed) {
-    border: 1px solid rgb(var(--base));
-    background-color: rgb(var(--base));
+    border: 1px solid hsl(var(--base));
+    background-color: hsl(var(--base));
     background-image: initial !important;
     box-shadow: inset 0 0 0 transparent !important;
     color: hsl(var(--white));
