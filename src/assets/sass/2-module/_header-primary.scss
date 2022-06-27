@@ -1,0 +1,17 @@
+.header-primary {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 19;
+
+    @include lg-screen {
+        background: hsl(var(--dark));
+    }
+
+    &__content {
+        @include lg-screen {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

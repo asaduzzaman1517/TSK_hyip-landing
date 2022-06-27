@@ -5,19 +5,23 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
   &--row {
-      flex-direction: row;
+    flex-direction: row;
   }
+
   &--base {
-    li {
+    > li {
       position: relative;
       display: flex;
       align-items: center;
+
       &::before {
         content: "";
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
         width: 10px;
         height: 10px;
         line-height: 10px;

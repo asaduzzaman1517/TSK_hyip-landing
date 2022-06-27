@@ -6,7 +6,7 @@
     content: "\f107";
     font-family: "Line Awesome Free";
     font-weight: 900;
-    color: hsl(var(--accent-100));
+    color: hsl(var(--dark));
     position: absolute;
     top: 50%;
     right: 0;
@@ -22,7 +22,7 @@
   }
 
   .form-select {
-    height: 50px;
+    height: 45px;
     border-radius: 3px;
     padding-right: 46px;
     font-size: 0.875rem;

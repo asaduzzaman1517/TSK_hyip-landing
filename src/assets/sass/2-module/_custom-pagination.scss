@@ -1,22 +1,27 @@
 .pagination {
   margin-bottom: 0;
+
   .page-item {
     margin-right: 1rem;
+
     &.active {
       .page-link {
         background-color: hsl(var(--base));
         border: 1px solid hsl(var(--base));
       }
     }
+
     &.disabled {
       .page-link {
         background: hsl(var(--accent-300));
         border-color: hsl(var(--accent-300));
       }
     }
+
     &:last-child {
       margin-right: 0;
     }
+
     &:first-child {
       .page-link {
         border-radius: 50%;
@@ -24,6 +29,7 @@
         line-height: 1;
       }
     }
+
     &:last-child {
       .page-link {
         border-radius: 50%;
@@ -32,6 +38,7 @@
       }
     }
   }
+
   .page-link {
     display: flex;
     justify-content: center;
@@ -45,6 +52,7 @@
     text-align: center;
     font-size: 14px;
     background: transparent;
+
     &:hover {
       background-color: hsl(var(--base));
       border: 1px solid hsl(var(--base));

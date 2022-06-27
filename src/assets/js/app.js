@@ -2,40 +2,6 @@
   "use strict";
 
   $(document).ready(function () {
-    // Mobile Menu Dropdown
-    const mobileNavToggler = document.querySelector(".nav--toggle");
-    const body = document.querySelector("body");
-    if (mobileNavToggler) {
-      mobileNavToggler.addEventListener("click", function () {
-        body.classList.toggle("nav-toggler");
-      });
-    }
-    // Mobile Menu Dropdown End
-
-    // Mobile Submenu
-    $(".primary-menu__list.has-sub .primary-menu__link").on(
-      "click",
-      function (e) {
-        e.preventDefault();
-        body.classList.add("primary-submenu-toggler");
-      }
-    );
-    $(".primary-menu__list.has-sub.active .primary-menu__link").on(
-      "click",
-      function (e) {
-        e.preventDefault();
-        body.classList.remove("primary-submenu-toggler");
-      }
-    );
-    $(".primary-menu__list.has-sub").on("click", function () {
-      $(this).toggleClass("active").siblings().removeClass("active");
-    });
-    // Mobile Submenu End
-
-    //   Nice Select Inititate
-    $(".custom--select").niceSelect();
-    //   Nice Select End
-
     // Search Popup
     var bodyOvrelay = $("#body-overlay");
     var searchPopup = $("#search-popup");
@@ -52,104 +18,35 @@
     });
     // Search Popup End
 
-    // Magnific Popup
-    var magPhoto = $(".show-video");
-    if (magPhoto.length) {
-      magPhoto.magnificPopup({
-        disableOn: 700,
-        type: "iframe",
-        mainClass: "mfp-fade",
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false,
-        disableOn: 300,
-      });
-    }
-    // Magnific Popup End
-
-    // Testimonial Slider
-    let testimonialSlider = $(".testimonial-slider");
-    if (testimonialSlider) {
-      testimonialSlider.slick({
-        mobileFirst: true,
-        arrows: false,
-        autoplay: true,
-        responsive: [
-          {
-            breakpoint: 767,
-            settings: {
-              slidesToShow: 2,
-            },
-          },
-          {
-            breakpoint: 1199,
-            settings: {
-              slidesToShow: 3,
-            },
-          },
-          {
-            breakpoint: 1599,
-            settings: {
-              slidesToShow: 4,
-            },
-          },
-        ],
-      });
-    }
-    // Testimonial Slider End
-
-    // Client Slider
-    let clientSlider = $(".client-slider");
-    if (clientSlider) {
-      clientSlider.slick({
-        mobileFirst: true,
-        arrows: false,
-        autoplay: true,
-        slidesToShow: 2,
-        autoplaySpeed: 1000,
-        speed: 2000,
-        responsive: [
-          {
-            breakpoint: 567,
-            settings: {
-              slidesToShow: 3,
-            },
-          },
-          {
-            breakpoint: 767,
-            settings: {
-              slidesToShow: 4,
-            },
-          },
-          {
-            breakpoint: 991,
-            settings: {
-              slidesToShow: 5,
-            },
-          },
-          {
-            breakpoint: 1199,
-            settings: {
-              slidesToShow: 6,
-            },
-          },
-          {
-            breakpoint: 1399,
-            settings: {
-              slidesToShow: 7,
-            },
-          },
-        ],
-      });
-    }
-    // Client Slider End
-
     // Animate the scroll to top
     $(".back-to-top").on("click", function (event) {
       event.preventDefault();
       $("html, body").animate({ scrollTop: 0 }, 300);
     });
+
+    // Mobile Submenu
+  const mobileScreen = window.matchMedia("(max-width: 991px)");
+  let subMenu = $(".primary-menu > li.has-sub .primary-menu__link");
+
+  function mobileScreenInit(e) {
+    if (e.matches) {
+      if (subMenu) {
+        subMenu.on("click", function (e) {
+          e.preventDefault();
+          $(this)
+            .toggleClass("active")
+            .siblings(".primary-menu__sub")
+            .slideToggle();
+        });
+      }
+    }
+  }
+  // Register event listener
+  mobileScreen.addEventListener("change", mobileScreenInit);
+  mobileScreenInit(mobileScreen);
+  // Mobile Submenu End
   });
+  
 })(jQuery);
 
 // Header Fixed On Scroll

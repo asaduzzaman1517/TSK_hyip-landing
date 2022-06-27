@@ -3,9 +3,11 @@
       display: grid;
       place-items: center;
       padding-inline: 15px;
+      position: relative;
       border: 1px solid hsl(var(--base) / 0.3);
-      border-right: none;
       background: hsl(var(--base));
-      color: hsl(var(--accent-100));
+      font-size: 14px;
+      font-weight: 500;
+      color: hsl(var(--dark));
     }
   }

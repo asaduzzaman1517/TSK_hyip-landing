@@ -18,14 +18,12 @@
   --base-s: 68%;
   --base-l: 48%;
   --base: var(--base-h) var(--base-s) var(--base-l);
-  --base-dark: var(--base-h) var(--base-s) calc(var(--base-l) - 28%);
 
   // Accent Color 
   --accent-h: 41;
   --accent-s: 100%;
   --accent-l: 53%;
   --accent: var(--accent-h) var(--accent-s) var(--accent-l);
-  --accent-dark: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 33%);
 
   //Light Color
   --light-h: 186;
@@ -34,15 +32,18 @@
   --light: var(--light-h) var(--light-s) var(--light-l);
 
   //Dark Color
-  --dark: 230 20% 20%;
-  --dark-100: 230 20% 40%;
-  --dark-200: 230 20% 35%;
-  --dark-300: 230 20% 30%;
-  --dark-400: 230 20% 25%;
-  --dark-500: 230 20% 15%;
-  --dark-600: 230 20% 10%;
-  --dark-700: 230 20% 5%;
-  --dark-800: 230 20% 0%;
+  --dark-h: 237;
+  --dark-s: 57%;
+  --dark-l: 15%;
+  --dark: var(--dark-h) var(--dark-s) var(--dark-l);
+  --dark-100: var(--dark-h) calc(var(--dark-s) - 7%) calc(var(--dark-l) + 15%);
+  --dark-200: var(--dark-h) calc(var(--dark-s) - 7%) calc(var(--dark-l) + 10%);
+  --dark-300: var(--dark-h) calc(var(--dark-s) - 7%) calc(var(--dark-l) + 8%);
+  --dark-400: var(--dark-h) calc(var(--dark-s) - 7%) calc(var(--dark-l) + 5%);
+  --dark-500: var(--dark-h) var(--dark-s) calc(var(--dark-l) - 2%);
+  --dark-600: var(--dark-h) var(--dark-s) calc(var(--dark-l) - 4%);
+  --dark-700: var(--dark-h) var(--dark-s) calc(var(--dark-l) - 6%);
+  --dark-800: var(--dark-h) var(--dark-s) calc(var(--dark-l) - 8%);
 
   // Black Color Shade 
   --black-h: 0;

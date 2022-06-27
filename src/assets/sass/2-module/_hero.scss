@@ -7,9 +7,11 @@
   background-repeat: no-repeat;
   background-image: url(../images/hero.jpg);
   z-index: 2;
+
   @include md-screen {
     min-height: 85vh;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -17,16 +19,16 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(
-      to right,
-      hsl(var(--accent) / 0.9),
-      hsl(var(--accent) / 0.9)
-    );
+    background-image: linear-gradient(to right,
+        hsl(var(--accent) / 0.9),
+        hsl(var(--accent) / 0.9));
     mix-blend-mode: multiply;
     z-index: -1;
   }
+
   &__img {
     position: relative;
+
     &-is {
       @include xliv-screen {
         width: 750px;
@@ -36,15 +38,18 @@
       }
     }
   }
+
   &__content {
     padding-top: 100px;
     padding-bottom: 80px;
     margin-top: auto;
     margin-bottom: auto;
     overflow: hidden;
+
     &-title {
       color: hsl(var(--white));
     }
+
     &-para {
       max-width: 55ch;
       color: hsl(var(--white));
