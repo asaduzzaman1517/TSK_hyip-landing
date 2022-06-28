@@ -12,9 +12,9 @@
     margin-top: 0;
   }
   &__link {
-    color: hsl(var(--canvas-200));
+    color: hsl(var(--base));
     &:hover {
-      color: hsl(var(--accent-400));
+      color: hsl(var(--accent));
     }
   }
   &-alt {

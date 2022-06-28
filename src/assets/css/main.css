@@ -64,8 +64,8 @@
     --base-s: 68%;
     --base-l: 48%;
     --base: var(--base-h) var(--base-s) var(--base-l);
-    --accent-h: 41;
-    --accent-s: 100%;
+    --accent-h: 250;
+    --accent-s: 60%;
     --accent-l: 53%;
     --accent: var(--accent-h) var(--accent-s) var(--accent-l);
     --light-h: 186;
@@ -308,6 +308,8 @@ input[type=number] {
     top: 0;
     width: 100%;
     z-index: 19;
+    backdrop-filter: blur(10px);
+    background: hsl(var(--dark)/0.3);
 }
 
 @media screen and (min-width: 992px) {
@@ -914,7 +916,7 @@ textarea.form--control:focus {
 }
 
 .section__title span {
-    background: linear-gradient(to right, hsl(var(--danger)), hsl(var(--canvas-900)));
+    background: linear-gradient(to right, hsl(var(--danger)), hsl(var(--base)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -1128,11 +1130,11 @@ textarea.form--control:focus {
 }
 
 .widget__link {
-    color: hsl(var(--canvas-200));
+    color: hsl(var(--base));
 }
 
 .widget__link:hover {
-    color: hsl(var(--accent-400));
+    color: hsl(var(--accent));
 }
 
 .widget-alt__head {
@@ -1374,7 +1376,7 @@ textarea.form--control:focus {
     }
 
     .table-responsive--sm tbody tr:nth-child(odd) {
-        background-color: hsl(var(--accent-400));
+        background-color: hsl(var(--accent));
     }
 
     .table-responsive--sm tbody tr td {
@@ -1650,8 +1652,8 @@ textarea.form--control:focus {
 }
 
 .pagination .page-item.disabled .page-link {
-    background: hsl(var(--accent-300));
-    border-color: hsl(var(--accent-300));
+    background: hsl(var(--accent));
+    border-color: hsl(var(--accent));
 }
 
 .pagination .page-item:last-child {
@@ -1809,10 +1811,6 @@ textarea.form--control:focus {
     overflow: hidden;
 }
 
-.fixed-header .navbar {
-    background: hsl(var(--dark));
-}
-
 .fixed-header .nav-container {
     border-radius: 0 0 5px 5px;
 }
@@ -1898,6 +1896,16 @@ textarea.form--control:focus {
         display: block !important;
     }
 }
+
+.navbar-collapse.show {
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar-collapse.show {
+        margin-bottom: 0;
+    }
+}
 /*---------------------------------------
     Navbar
 -----------------------------------------*/
@@ -1907,6 +1915,160 @@ textarea.form--control:focus {
         padding-bottom: 0;
     }
 }
+/*---------------------------------------
+    Custom Dropdown
+-----------------------------------------*/
+.custom-dropdown-open .custom-dropdown__content.is-open {
+    visibility: visible;
+    opacity: 1;
+    top: calc(100% + 20px);
+}
+
+.custom-dropdown {
+    position: relative;
+    isolation: isolate;
+}
+
+.custom-dropdown__user {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-dropdown__user:hover {
+    cursor: pointer;
+}
+
+.custom-dropdown__user:hover::after {
+    inset: 0;
+}
+
+.custom-dropdown__user::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    outline: 2px solid hsl(var(--base));
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.custom-dropdown__user-img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    outline: 1px solid hsl(var(--base)/0.3);
+}
+
+.custom-dropdown__content {
+    min-width: 250px;
+    position: absolute;
+    top: calc(100% + 30px);
+    background: hsl(var(--white));
+    border-radius: 5px;
+    box-shadow: 0 0 20px hsl(var(--dark)/0.2);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    border: 1px solid hsl(var(--base)/0.3);
+}
+
+.custom-dropdown__content-start {
+    left: 0;
+}
+
+.custom-dropdown__content-start::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid hsl(var(--white));
+    position: absolute;
+    bottom: 100%;
+    left: 5px;
+    filter: drop-shadow(1px 0 0 hsl(var(--base)/0.3)) drop-shadow(-1px 0 0 hsl(var(--base)/0.3));
+}
+
+.custom-dropdown__content-end {
+    right: 0;
+}
+
+.custom-dropdown__content-end::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid hsl(var(--white));
+    position: absolute;
+    bottom: 100%;
+    right: 5px;
+    filter: drop-shadow(1px 0 0 hsl(var(--base)/0.3)) drop-shadow(-1px 0 0 hsl(var(--base)/0.3));
+}
+
+.custom-dropdown__content-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.custom-dropdown__content-center::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid hsl(var(--white));
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(1px 0 0 hsl(var(--base)/0.3)) drop-shadow(-1px 0 0 hsl(var(--base)/0.3));
+}
+
+.custom-dropdown__list {
+    --gap: 0;
+}
+
+.custom-dropdown__list li {
+    line-height: 1;
+    border-bottom: 1px solid hsl(var(--base)/0.2);
+}
+
+.custom-dropdown__list li:last-child {
+    border-bottom: none;
+}
+
+.custom-dropdown__body {
+    max-height: 275px;
+}
+
+.custom-dropdown__body-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 15px;
+}
+
+.custom-dropdown__body-link:hover {
+    background: hsl(var(--base)/0.05);
+}
+
+.custom-dropdown__body-icon {
+    display: inline-block;
+    font-size: 24px;
+    color: hsl(var(--base));
+}
+
+.custom-dropdown__body-text {
+    display: inline-block;
+    font-size: 14px;
+    color: hsl(var(--dark));
+}
+
 /*---------------------------------------
     0.3 Theme Style
 -----------------------------------------*/
@@ -1959,10 +2121,6 @@ textarea.form--control:focus {
 
 .text--accent {
     color: hsl(var(--accent));
-}
-
-.text--accent-400 {
-    color: hsl(var(--accent-400));
 }
 
 /*---------------------------------------
@@ -2997,6 +3155,6 @@ textarea.form--control:focus {
 }
 
 .footer__copyright {
-    background: hsl(var(--accent-600));
+    background: hsl(var(--accent));
 }
 /*# sourceMappingURL=main.css.map */

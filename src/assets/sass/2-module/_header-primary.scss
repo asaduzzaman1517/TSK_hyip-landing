@@ -3,6 +3,8 @@
     top: 0;
     width: 100%;
     z-index: 19;
+    backdrop-filter: blur(10px);
+    background: hsl(var(--dark)/.3);
 
     @include lg-screen {
         background: hsl(var(--dark));

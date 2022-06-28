@@ -25,28 +25,52 @@
     });
 
     // Mobile Submenu
-  const mobileScreen = window.matchMedia("(max-width: 991px)");
-  let subMenu = $(".primary-menu > li.has-sub .primary-menu__link");
+    const mobileScreen = window.matchMedia("(max-width: 991px)");
+    let subMenu = $(".primary-menu > li.has-sub .primary-menu__link");
 
-  function mobileScreenInit(e) {
-    if (e.matches) {
-      if (subMenu) {
-        subMenu.on("click", function (e) {
-          e.preventDefault();
-          $(this)
-            .toggleClass("active")
-            .siblings(".primary-menu__sub")
-            .slideToggle();
-        });
+    function mobileScreenInit(e) {
+      if (e.matches) {
+        if (subMenu) {
+          subMenu.on("click", function (e) {
+            e.preventDefault();
+            $(this)
+              .toggleClass("active")
+              .siblings(".primary-menu__sub")
+              .slideToggle();
+          });
+        }
       }
     }
-  }
-  // Register event listener
-  mobileScreen.addEventListener("change", mobileScreenInit);
-  mobileScreenInit(mobileScreen);
-  // Mobile Submenu End
+    // Register event listener
+    mobileScreen.addEventListener("change", mobileScreenInit);
+    mobileScreenInit(mobileScreen);
+    // Mobile Submenu End
+
+    // Custom Dropdown
+    let customDropdown = $('[data-set="custom-dropdown"]');
+    let dropdownContent = $(".custom-dropdown__content");
+    if (customDropdown || dropdownContent) {
+      customDropdown.each(function () {
+        $(this).on("click", function (e) {
+          e.stopPropagation();
+          $("body").toggleClass("custom-dropdown-open");
+          dropdownContent.toggleClass("is-open");
+        });
+      });
+      dropdownContent.each(function () {
+        $(this).on("click", function (e) {
+          e.stopPropagation();
+        });
+      });
+      $(document).on("click", function () {
+        $("body").removeClass("custom-dropdown-open");
+        dropdownContent.removeClass("is-open");
+      });
+    }
+    // Custom Dropdown End
+
+
   });
-  
 })(jQuery);
 
 // Header Fixed On Scroll
@@ -68,8 +92,8 @@ if (bodySelector.contains(header)) {
     fixHeader();
   });
 }
-
 // Header Fixed On Scroll End
+
 $(window).on("scroll", function () {
   var ScrollTop = $(".back-to-top");
   if ($(window).scrollTop() > 1200) {
