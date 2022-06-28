@@ -25,25 +25,16 @@
     });
 
     // Mobile Submenu
-    const mobileScreen = window.matchMedia("(max-width: 991px)");
-    let subMenu = $(".primary-menu > li.has-sub .primary-menu__link");
-
-    function mobileScreenInit(e) {
-      if (e.matches) {
-        if (subMenu) {
-          subMenu.on("click", function (e) {
-            e.preventDefault();
-            $(this)
-              .toggleClass("active")
-              .siblings(".primary-menu__sub")
-              .slideToggle();
-          });
+    let primaryMenu = $(".has-sub > .primary-menu__link");
+    let primarySubMenu = $(".primary-menu__sub");
+    if (primaryMenu || primarySubMenu) {
+      primaryMenu.on("click", function (e) {
+        e.preventDefault();
+        if (parseInt(screenSize) < parseInt(992)) {
+          $(this).toggleClass("active").siblings(primarySubMenu).slideToggle();
         }
-      }
+      });
     }
-    // Register event listener
-    mobileScreen.addEventListener("change", mobileScreenInit);
-    mobileScreenInit(mobileScreen);
     // Mobile Submenu End
 
     // Custom Dropdown
@@ -108,3 +99,10 @@ $(window).on("load", function () {
   var preLoder = $(".preloader");
   preLoder.fadeOut(1000);
 });
+
+// Screen Size Counting
+let screenSize = window.innerWidth;
+window.addEventListener("resize", function (e) {
+  screenSize = window.innerWidth;
+});
+// Screen Size Counting End
