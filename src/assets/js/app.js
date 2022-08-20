@@ -21,7 +21,9 @@
     // Animate the scroll to top
     $(".back-to-top").on("click", function (event) {
       event.preventDefault();
-      $("html, body").animate({ scrollTop: 0 }, 300);
+      $("html, body").animate({
+        scrollTop: 0
+      }, 300);
     });
 
     // Mobile Submenu
@@ -66,14 +68,15 @@
 
 // Header Fixed On Scroll
 var bodySelector = document.querySelector("body");
-const header = document.querySelector(".header-fixed");
+const header = document.querySelector(".header-primary--fixed");
 
 if (bodySelector.contains(header)) {
   const headerTop = header.offsetTop;
+
   function fixHeader() {
-    if (window.scrollY > headerTop) {
+    if (window.scrollY >= headerTop) {
       document.body.classList.add("fixed-header");
-    } else if (window.scrollY <= headerTop) {
+    } else if (window.scrollY < headerTop) {
       document.body.classList.remove("fixed-header");
     } else {
       document.body.classList.remove("fixed-header");
@@ -81,6 +84,9 @@ if (bodySelector.contains(header)) {
   }
   $(window).on("scroll", function () {
     fixHeader();
+    if (window.scrollY == 0) {
+      document.body.classList.remove("fixed-header");
+    }
   });
 }
 // Header Fixed On Scroll End

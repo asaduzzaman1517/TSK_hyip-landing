@@ -6,7 +6,7 @@
   flex-shrink: 0;
 
   &:hover {
-    box-shadow: 0 5px 10px hsl(var(--dark) / 0.2);
+    box-shadow: 0 5px 10px hsl(var(--dark) / 0.1);
   }
 
   // Color Option
@@ -98,8 +98,19 @@
     color: hsl(var(--white));
 
     &:hover {
-      color: hsl(var(--white));
       border: 1px solid transparent;
+      background: hsl(var(--base));
+      color: hsl(var(--white));
+    }
+    &:focus {
+      border: 1px solid transparent;
+      background: hsl(var(--base));
+      color: hsl(var(--white));
+    }
+    &:action {
+      border: 1px solid transparent;
+      background: hsl(var(--base));
+      color: hsl(var(--white));
     }
   }
 

@@ -1,13 +1,11 @@
 .fixed-header {
-    .header-top {
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
+    .header-primary--fixed {
+        position: fixed;
+        top: 0;
+        background: hsl(var(--dark));
     }
 
     .nav-container {
-        border-radius: 0 0 5px 5px;
+        border-radius: 5px;
     }
 }

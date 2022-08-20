@@ -124,7 +124,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 1.5rem 0 1.38rem;
+    margin: 1.5rem 0 1rem;
     font-family: var(--heading-font);
     font-weight: 700;
     line-height: 1.2;
@@ -304,24 +304,29 @@ input[type=number] {
     Header Priamry
 -----------------------------------------*/
 .header-primary {
-    position: fixed;
-    top: 0;
     width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
     z-index: 19;
-    backdrop-filter: blur(10px);
-    background: hsl(var(--dark)/0.3);
 }
 
-@media screen and (min-width: 992px) {
-    .header-primary {
-        background: hsl(var(--dark));
-    }
+.header-primary--sticky {
+    position: sticky;
+    top: 0;
+    background: hsl(var(--dark));
+}
+
+.header-primary--fixed {
+    position: absolute;
+    transition: all 0.3s ease;
 }
 
 @media screen and (min-width: 992px) {
     .header-primary__content {
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        gap: 1rem;
     }
 }
 /*---------------------------------------
@@ -764,7 +769,7 @@ textarea.form--control:focus {
 }
 
 .btn:hover {
-    box-shadow: 0 5px 10px hsl(var(--dark)/0.2);
+    box-shadow: 0 5px 10px hsl(var(--dark)/0.1);
 }
 
 .btn--primary {
@@ -856,8 +861,21 @@ textarea.form--control:focus {
 }
 
 .btn--base:hover {
-    color: hsl(var(--white));
     border: 1px solid transparent;
+    background: hsl(var(--base));
+    color: hsl(var(--white));
+}
+
+.btn--base:focus {
+    border: 1px solid transparent;
+    background: hsl(var(--base));
+    color: hsl(var(--white));
+}
+
+.btn--base:action {
+    border: 1px solid transparent;
+    background: hsl(var(--base));
+    color: hsl(var(--white));
 }
 
 .btn--sqr {
@@ -1803,16 +1821,14 @@ textarea.form--control:focus {
 /*---------------------------------------
     Fixed Header 
 -----------------------------------------*/
-.fixed-header .header-top {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
+.fixed-header .header-primary--fixed {
+    position: fixed;
+    top: 0;
+    background: hsl(var(--dark));
 }
 
 .fixed-header .nav-container {
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px;
 }
 
 /*---------------------------------------
