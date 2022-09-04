@@ -6,7 +6,7 @@
   flex-shrink: 0;
 
   &:hover {
-    box-shadow: 0 5px 10px hsl(var(--dark) / 0.1);
+    box-shadow: 0 3px 6px hsl(var(--dark) / 0.05);
   }
 
   // Color Option
@@ -31,12 +31,24 @@
   }
 
   &--success {
+    font-weight: 700;
     background: hsl(var(--success));
-    color: hsl(var(--white));
+    color: hsl(var(--dark));
 
     &:hover {
-      color: hsl(var(--white));
+      border: 1px solid transparent;
       background: hsl(var(--success));
+      color: hsl(var(--dark));
+    }
+    &:focus {
+      border: 1px solid transparent;
+      background: hsl(var(--success));
+      color: hsl(var(--dark));
+    }
+    &:action {
+      border: 1px solid transparent;
+      background: hsl(var(--success));
+      color: hsl(var(--dark));
     }
   }
 
@@ -81,12 +93,14 @@
   }
 
   &--light {
-    background-color: hsl(var(--white));
-    color: hsl(var(--primary));
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(var(--light));
+    color: hsl(var(--dark));
 
     &:hover {
-      color: hsl(var(--white));
-      background: hsl(var(--dark));
+      color: hsl(var(--base));
+      background-color: hsl(var(--light));
     }
   }
 
@@ -95,22 +109,23 @@
     position: relative;
     isolation: isolate;
     background: hsl(var(--base));
-    color: hsl(var(--white));
+    font-weight: 700;
+    color: hsl(var(--light));
 
     &:hover {
       border: 1px solid transparent;
       background: hsl(var(--base));
-      color: hsl(var(--white));
+      color: hsl(var(--light));
     }
     &:focus {
       border: 1px solid transparent;
       background: hsl(var(--base));
-      color: hsl(var(--white));
+      color: hsl(var(--light));
     }
     &:action {
       border: 1px solid transparent;
       background: hsl(var(--base));
-      color: hsl(var(--white));
+      color: hsl(var(--light));
     }
   }
 
@@ -127,7 +142,7 @@
   }
 
   &--md {
-    padding: 0.5rem 1rem; //8px X 16px
+    padding: 0.5rem 1.5rem; //8px X 16px
   }
 
   &--lg {

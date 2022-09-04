@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap');
 
 :root {
   // TypoGraphy
-  --heading-font: "Inter", sans-serif;
-  --body-font: 'Roboto', sans-serif;
+  --heading-font: 'DM Sans', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+  --style-font: 'DM Serif Display', serif;
 
   --d1: clamp(3.5rem, 6vw + 1rem, 6.25rem); //Max: 100px
   --h1: clamp(2.8125rem, 4vw + 1rem, 4.209rem); //Min:45px - Max:67.34px
@@ -14,9 +15,9 @@
   --h6: 1rem;
 
   // Base Colors
-  --base-h: 151;
-  --base-s: 68%;
-  --base-l: 48%;
+  --base-h: 249;
+  --base-s: 100%;
+  --base-l: 67%;
   --base: var(--base-h) var(--base-s) var(--base-l);
 
   // Accent Color 
@@ -26,10 +27,12 @@
   --accent: var(--accent-h) var(--accent-s) var(--accent-l);
 
   //Light Color
-  --light-h: 186;
-  --light-s: 49%;
-  --light-l: 92%;
+  --light-h: 240;
+  --light-s: 100%;
+  --light-l: 98%;
   --light: var(--light-h) var(--light-s) var(--light-l);
+  --light-200: var(--light-h) var(--light-s) calc(var(--light-l) - 2%);
+  --light-300: calc(var(--light-h) - 18) var(--light-s) calc(var(--light-l) - 7%);
 
   //Dark Color
   --dark-h: 237;
@@ -57,9 +60,12 @@
   //Bootstrap Modifier
   --primary: 204 88% 44%;
   --secondary: 208 23% 55%;
-  --success: 161 74% 45%;
-  --danger: 5 76% 55%;
-  --warning: 43 99% 49%;
+  --success: 161 74% 48%;
+  --success-light: 160 69% 95%;
+  --danger: 356 76% 55%;
+  --danger-light: 356 97% 84%;
+  --warning: 24 97% 54%;
+  --warning-light: 23 100% 95%;
   --info: 190 76% 40%;
 
   --text: var(--black);
