@@ -67,6 +67,10 @@
   --warning: 24 97% 54%;
   --warning-light: 23 100% 95%;
   --info: 190 76% 40%;
+  --gradient-1: linear-gradient(120deg, hsl(var(--success)), hsl(var(--base)));
+  --gradient-2: linear-gradient(120deg, hsl(var(--base)), hsl(var(--danger-light)));
+  --gradient-3: linear-gradient(120deg, hsl(var(--base)), hsl(var(--info)));
+  --gradient-4: linear-gradient(120deg, hsl(var(--success)), hsl(var(--info)));
 
   --text: var(--black);
   --heading: var(--black);
