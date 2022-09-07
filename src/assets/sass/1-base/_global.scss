@@ -6,7 +6,7 @@
   --body-font: 'DM Sans', sans-serif;
   --style-font: 'DM Serif Display', serif;
 
-  --d1: clamp(3.5rem, 6vw + 1rem, 6.25rem); //Max: 100px
+  --d1: clamp(3.5rem, 6vw + 1rem, 8rem); //Max: 100px
   --h1: clamp(2.8125rem, 4vw + 1rem, 4.209rem); //Min:45px - Max:67.34px
   --h2: clamp(2.0625rem, 3vw + 1rem, 3.1575rem); //Min: 33px - Max: 50.52px
   --h3: clamp(1.875rem, 2.7vw + 1rem, 2.369rem); //Min: 30px - Max: 37.90px

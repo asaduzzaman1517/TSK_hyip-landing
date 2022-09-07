@@ -54,7 +54,7 @@
     --heading-font: "DM Sans", sans-serif;
     --body-font: "DM Sans", sans-serif;
     --style-font: "DM Serif Display", serif;
-    --d1: clamp(3.5rem, 6vw + 1rem, 6.25rem);
+    --d1: clamp(3.5rem, 6vw + 1rem, 8rem);
     --h1: clamp(2.8125rem, 4vw + 1rem, 4.209rem);
     --h2: clamp(2.0625rem, 3vw + 1rem, 3.1575rem);
     --h3: clamp(1.875rem, 2.7vw + 1rem, 2.369rem);
@@ -1049,13 +1049,13 @@ textarea.form--control:focus {
 }
 
 @media screen and (min-width: 1200px) {
-    .section__srink-content {
+    .section__shrink-content {
         padding-left: 40px;
     }
 }
 
 @media screen and (min-width: 1366px) {
-    .section__srink-content {
+    .section__shrink-content {
         padding-left: 70px;
     }
 }
@@ -2359,6 +2359,42 @@ textarea.form--control:focus {
     margin-bottom: 0;
 }
 
+/*---------------------------------------
+    Placeholder Text
+-----------------------------------------*/
+.placeholder-text {
+    position: relative;
+    isolation: isolate;
+}
+
+.placeholder-text--left .placeholder-text__is {
+    left: -60px;
+    transform: translateY(-50%) scale(-1);
+}
+
+.placeholder-text--right .placeholder-text__is {
+    right: -60px;
+}
+
+.placeholder-text__is {
+    display: none;
+    position: absolute;
+    top: 50%;
+    writing-mode: vertical-rl;
+    transform: translateY(-50%);
+    font-family: var(--style-font);
+    font-size: var(--d1);
+    line-height: 1;
+    background: linear-gradient(90deg, hsl(var(--dark)/0.01), hsl(var(--dark)/0.2));
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 1920px) {
+    .placeholder-text__is {
+        display: inline-block;
+    }
+}
 /*---------------------------------------
     0.3 Theme Style
 -----------------------------------------*/
