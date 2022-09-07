@@ -1,0 +1,76 @@
+.user-feature {
+    &--1 {
+        .user-feature__icon {
+            background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+            color: hsl(var(--white));
+        }
+    }
+    &--2 {
+        .user-feature__icon {
+            background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+            color: hsl(var(--white));
+        }
+    }
+    &--3 {
+        .user-feature__icon {
+            background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+            color: hsl(var(--white));
+        }
+    }
+    &--4 {
+        .user-feature__icon {
+            background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+            color: hsl(var(--white));
+        }
+    }
+    &--5 {
+        .user-feature__icon {
+            background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+            color: hsl(var(--white));
+        }
+    }
+    &--6 {
+        .user-feature__icon {
+            background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
+            color: hsl(var(--white));
+        }
+    }
+    &--6 {
+        .user-feature__icon {
+            background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+            color: hsl(var(--white));
+        }
+    }
+    &--7 {
+        .user-feature__icon {
+            background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
+            color: hsl(var(--white));
+        }
+    }
+    &--8 {
+        .user-feature__icon {
+            background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+            color: hsl(var(--white));
+        }
+    }
+
+    &__icon {
+        display: inline-grid;
+        place-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        font-size: 1.8rem;
+        line-height: 1;
+        transition: all .3s ease;
+    }
+
+    &__title {
+        margin-top: .8rem;
+        margin-bottom: .5rem;
+    }
+
+    &__description {
+        margin-bottom: 0;
+    }
+}

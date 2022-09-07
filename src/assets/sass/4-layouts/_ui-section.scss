@@ -1,0 +1,18 @@
+.ui-section {
+    position: relative;
+    isolation: isolate;
+
+    @include md-screen {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 70%;
+            background: hsl(var(--light)/.5);
+            z-index: -1;
+        }
+    }
+
+}

@@ -1,61 +1,44 @@
 .section {
   padding-top: clamp(60px, 8vw, 120px);
   padding-bottom: clamp(60px, 8vw, 120px);
+
   &--sm {
     padding-top: clamp(30px, 4vw, 60px);
     padding-bottom: clamp(30px, 4vw, 60px);
   }
+
   &--top {
     padding-top: clamp(60px, 8vw, 120px);
   }
+
   &--bottom {
     padding-bottom: clamp(60px, 8vw, 120px);
   }
+
   &__head {
     padding-bottom: clamp(30px, 4vw, 60px);
   }
+
   &__para {
     max-width: 60ch;
   }
-  &__title {
-    span {
-      background: linear-gradient(
-        to right,
-        hsl(var(--danger)),
-        hsl(var(--base))
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
+
   &__subtitle {
     display: inline-block;
     position: relative;
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     font-family: var(--heading-font);
     color: hsl(var(--base));
-    &::after {
-      content: "";
-      position: absolute;
-      width: 15px;
-      height: 4px;
-      border-radius: 20px;
-      top: 50%;
-      left: calc(100% + 10px);
-      transform: translateY(-50%);
-      background-color: hsl(var(--base) / 0.5);
+  }
+
+  &__srink-content {
+    @include xl-screen {
+      padding-left: 40px;
     }
-    &::before {
-      content: "";
-      position: absolute;
-      width: 35px;
-      height: 4px;
-      border-radius: 20px;
-      top: 50%;
-      left: calc(100% + 30px);
-      transform: translateY(-50%);
-      background-color: hsl(var(--base));
+
+    @include xli-screen {
+      padding-left: 70px;
     }
   }
 }
