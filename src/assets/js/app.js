@@ -70,6 +70,12 @@
 new WOW().init();
 // Wow.js initiate  End
 
+// Smooth Scroll
+butter.init({
+	wrapperId: "butter",
+});
+// Smooth Scroll End
+
 // Header Fixed On Scroll
 var bodySelector = document.querySelector("body");
 const header = document.querySelector(".header-primary--fixed");

@@ -1531,7 +1531,7 @@ textarea.form--control:focus {
 
 .custom--accordion .accordion-item {
     border-radius: 0 !important;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     background: transparent;
     color: hsl(var(--text));
     border: 0;
@@ -1542,13 +1542,13 @@ textarea.form--control:focus {
 }
 
 .custom--accordion .accordion-button {
-    padding: 15px 20px;
+    padding: 12px 20px;
     border-radius: 3px;
     border: 1px solid hsl(var(--border)/0.5);
-    background: hsl(var(--light));
-    color: hsl(var(--base));
+    background: hsl(var(--white));
+    color: hsl(var(--heading));
     font-family: var(--body-font);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -1574,27 +1574,28 @@ textarea.form--control:focus {
     transform: rotate(0deg) !important;
     font-family: "Line Awesome Free";
     font-weight: 900;
-    font-size: 24px;
+    font-size: 18px;
     color: hsl(var(--base));
     line-height: 1;
 }
 
 .custom--accordion .accordion-button:not(.collapsed) {
-    border: 1px solid hsl(var(--base));
-    background-color: hsl(var(--base));
+    border: 1px solid hsl(var(--border)/0.5);
+    background-color: hsl(var(--white));
     background-image: initial !important;
     box-shadow: inset 0 0 0 transparent !important;
-    color: hsl(var(--white));
+    color: hsl(var(--heading));
 }
 
 .custom--accordion .accordion-button:not(.collapsed)::after {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .custom--accordion .accordion-body {
-    margin-top: 15px;
+    margin-top: 5px;
     border-radius: 5px;
-    background: hsl(var(--light));
+    border: 1px solid hsl(var(--border)/0.5);
+    background: hsl(var(--white));
     color: hsl(var(--text));
 }
 
@@ -2407,6 +2408,21 @@ textarea.form--control:focus {
         display: inline-block;
     }
 }
+/*---------------------------------------
+    Feature Card
+-----------------------------------------*/
+.feature-card__img {
+    width: 100%;
+    height: 250px;
+    text-align: center;
+}
+
+.feature-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 /*---------------------------------------
     0.3 Theme Style
 -----------------------------------------*/
@@ -3489,7 +3505,7 @@ textarea.form--control:focus {
 Main Container
 -----------------------------------------*/
 .main-container {
-    background-image: url(../images/main-bg.svg);
+    background-image: url(../images/main-bg.png);
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;

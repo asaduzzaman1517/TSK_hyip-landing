@@ -4,7 +4,7 @@
   }
   .accordion-item {
     border-radius: 0 !important;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     background: transparent;
     color: hsl(var(--text));
     border: 0;
@@ -13,13 +13,13 @@
     }
   }
   .accordion-button {
-    padding: 15px 20px;
+    padding: 12px 20px;
     border-radius: 3px;
     border: 1px solid hsl(var(--border)/.5);
-    background: hsl(var(--light));
-    color: hsl(var(--base));
+    background: hsl(var(--white));
+    color: hsl(var(--heading));
     font-family: var(--body-font);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     &:focus {
       border-color: hsl(var(--border));
@@ -44,25 +44,26 @@
       transform: rotate(0deg) !important;
       font-family: "Line Awesome Free";
       font-weight: 900;
-      font-size: 24px;
+      font-size: 18px;
       color: hsl(var(--base));
       line-height: 1;
     }
   }
   .accordion-button:not(.collapsed) {
-    border: 1px solid hsl(var(--base));
-    background-color: hsl(var(--base));
+    border: 1px solid hsl(var(--border)/.5);
+    background-color: hsl(var(--white));
     background-image: initial !important;
     box-shadow: inset 0 0 0 transparent !important;
-    color: hsl(var(--white));
+    color: hsl(var(--heading));
     &::after {
-      color: hsl(var(--white));
+      color: hsl(var(--base));
     }
   }
   .accordion-body {
-    margin-top: 15px;
+    margin-top: 5px;
     border-radius: 5px;
-    background: hsl(var(--light));
+    border: 1px solid hsl(var(--border)/.5);
+    background: hsl(var(--white));
     color: hsl(var(--text));
   }
 }
