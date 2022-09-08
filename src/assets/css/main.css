@@ -1059,6 +1059,18 @@ textarea.form--control:focus {
         padding-left: 70px;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .section__shrink-content-alt {
+        padding-right: 40px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .section__shrink-content-alt {
+        padding-right: 70px;
+    }
+}
 /*---------------------------------------
     Icon
 -----------------------------------------*/
@@ -2368,12 +2380,12 @@ textarea.form--control:focus {
 }
 
 .placeholder-text--left .placeholder-text__is {
-    left: -60px;
+    left: -100px;
     transform: translateY(-50%) scale(-1);
 }
 
 .placeholder-text--right .placeholder-text__is {
-    right: -60px;
+    right: -100px;
 }
 
 .placeholder-text__is {
