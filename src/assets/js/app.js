@@ -63,6 +63,35 @@
 				dropdownContent.removeClass("is-open");
 			});
 		}
+		// Custom Dropdown End
+
+		// Feedback Slider
+		let feedback = $(".feedback-slider");
+		if (feedback) {
+			feedback.slick({
+				mobileFirst: true,
+				slidesToShow: 1,
+				prevArrow:
+					'<button type="button" class="feedback-slider__arrow feedback-slider__arrow-prev"><i class="las la-angle-left"></i></button>',
+				nextArrow:
+					'<button type="button" class="feedback-slider__arrow feedback-slider__arrow-next"><i class="las la-angle-right"></i></button>',
+				responsive: [
+					{
+						breakpoint: 991,
+						settings: {
+							slidesToShow: 2,
+						},
+					},
+					{
+						breakpoint: 1399,
+						settings: {
+							slidesToShow: 3,
+						},
+					},
+				],
+			});
+		}
+		// Feedback Slider End
 	});
 })(jQuery);
 

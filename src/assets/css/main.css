@@ -2424,6 +2424,289 @@ textarea.form--control:focus {
 }
 
 /*---------------------------------------
+    Secondary Feature
+-----------------------------------------*/
+@media screen and (min-width: 1200px) {
+    .secondary-feature--list {
+        row-gap: 2rem;
+        column-gap: 0.5rem;
+    }
+}
+
+.secondary-feature--list li {
+    width: calc(50% - 1rem);
+}
+
+@media screen and (min-width: 576px) {
+    .secondary-feature--list li {
+        width: calc(33% - 1rem);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .secondary-feature--list li {
+        width: calc(25% - 1rem);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .secondary-feature--list li {
+        width: calc(20% - 1rem);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .secondary-feature--list li {
+        width: calc(16.6% - 1rem);
+    }
+}
+
+.secondary-feature--list li:nth-of-type(1) .secondary-feature__icon::before {
+    background: linear-gradient(-45deg, #ff3d00 0%, #0400ff 100%);
+}
+
+.secondary-feature--list li:nth-of-type(2) .secondary-feature__icon::before {
+    background: linear-gradient(-45deg, #60efff 0%, #00ff87 100%);
+}
+
+.secondary-feature--list li:nth-of-type(3) .secondary-feature__icon::before {
+    background: linear-gradient(-45deg, #60efff 0%, #0061ff 100%);
+}
+
+.secondary-feature--list li:nth-of-type(4) .secondary-feature__icon::before {
+    background: linear-gradient(-45deg, #45caff 0%, #ff1b6b 100%);
+}
+
+.secondary-feature--list li:nth-of-type(5) .secondary-feature__icon::before {
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+}
+
+.secondary-feature--list li:nth-of-type(6) .secondary-feature__icon::before {
+    background: linear-gradient(-45deg, #c6f8ff 0%, #595cff 100%);
+}
+
+.secondary-feature--list li:nth-of-type(7) .secondary-feature__icon::before {
+    background: linear-gradient(-45deg, #f8acff 0%, #696eff 100%);
+}
+
+.secondary-feature--list li:nth-of-type(8) .secondary-feature__icon::before {
+    background: linear-gradient(-45deg, #ffc8c8 0%, #ff5858 100%);
+}
+
+.secondary-feature--list li:nth-of-type(9) .secondary-feature__icon::before {
+    background: linear-gradient(-45deg, #b84fce 0%, #d4acfb 100%);
+}
+
+.secondary-feature--list li:nth-of-type(10) .secondary-feature__icon::before {
+    background: linear-gradient(-45deg, #aefb2a 0%, #57ebde 100%);
+}
+
+.secondary-feature--list li:nth-of-type(11) .secondary-feature__icon::before {
+    background: linear-gradient(-45deg, #03E5B7 0%, #037ADE 100%);
+}
+
+.secondary-feature--list li:nth-of-type(12) .secondary-feature__icon::before {
+    background: linear-gradient(-45deg, #FFF000 0%, #ED008C 100%);
+}
+
+.secondary-feature {
+    text-align: center;
+}
+
+.secondary-feature__icon {
+    width: 90px;
+    height: 90px;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 10px;
+    background: hsl(var(--white));
+    box-shadow: 0 0 8px hsl(var(--dark)/0.05);
+}
+
+.secondary-feature__icon::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate3d(0px, 10px, 0) scale(0.95);
+    filter: blur(20px);
+    opacity: 0.25;
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+
+.secondary-feature__icon::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+
+.secondary-feature__icon-is {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+}
+
+.secondary-feature__title {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+@media screen and (min-width: 1200px) {
+    .secondary-feature__title {
+        margin-top: 1rem;
+    }
+}
+/*---------------------------------------
+    Feedback Card
+-----------------------------------------*/
+.feedback-card {
+    padding: 25px 15px;
+    background: hsl(var(--white));
+}
+
+@media screen and (min-width: 400px) {
+    .feedback-card {
+        padding: 30px 20px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .feedback-card {
+        padding: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .feedback-card {
+        padding: 40px 24px;
+    }
+}
+
+.feedback-card__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.feedback-card__title {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.feedback-card__rating {
+    flex-shrink: 0;
+    --gap: 5px;
+}
+
+.feedback-card__star {
+    display: inline-block;
+    font-size: 14px;
+    color: hsl(var(--warning));
+}
+
+.feedback-card__body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.feedback-card__user {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.feedback-card__user-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feedback-card__username {
+    margin: 0;
+}
+
+.feedback-card__designation {
+    display: block;
+    font-size: 14px;
+}
+
+.feedback-card__footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feedback-card__footer-content {
+    flex-grow: 1;
+}
+
+/*---------------------------------------
+    Feedback Slider
+-----------------------------------------*/
+.feedback-slider:hover .feedback-slider__arrow {
+    visibility: visible;
+    opacity: 1;
+}
+
+.feedback-slider__item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.feedback-slider__arrow {
+    display: grid;
+    place-content: center;
+    visibility: hidden;
+    opacity: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid hsl(var(--base));
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: hsl(var(--light));
+    color: hsl(var(--base));
+    line-height: 1;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.feedback-slider__arrow:hover {
+    background: hsl(var(--base));
+    color: hsl(var(--light));
+}
+
+.feedback-slider__arrow-prev {
+    left: 0;
+}
+
+.feedback-slider__arrow-next {
+    right: 0;
+}
+
+/*---------------------------------------
     0.3 Theme Style
 -----------------------------------------*/
 /*---------------------------------------
@@ -3527,7 +3810,7 @@ UI Section
         bottom: 0;
         right: 0;
         width: 70%;
-        background: hsl(var(--light)/0.5);
+        background: hsl(var(--light)/0.2);
         z-index: -1;
     }
 }
