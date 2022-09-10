@@ -33,19 +33,11 @@
   }
 
   &__shrink-content {
-    @include xl-screen {
-      padding-left: 40px;
-    }
-
     @include xli-screen {
       padding-left: 70px;
     }
 
     &-alt {
-      @include xl-screen {
-        padding-right: 40px;
-      }
-
       @include xli-screen {
         padding-right: 70px;
       }

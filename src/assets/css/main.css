@@ -1048,21 +1048,9 @@ textarea.form--control:focus {
     color: hsl(var(--base));
 }
 
-@media screen and (min-width: 1200px) {
-    .section__shrink-content {
-        padding-left: 40px;
-    }
-}
-
 @media screen and (min-width: 1366px) {
     .section__shrink-content {
         padding-left: 70px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .section__shrink-content-alt {
-        padding-right: 40px;
     }
 }
 
@@ -2707,6 +2695,78 @@ textarea.form--control:focus {
 }
 
 /*---------------------------------------
+    CTA
+-----------------------------------------*/
+.cta {
+    padding: 30px 15px;
+    background-image: url(../images/cta-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+    .cta {
+        padding: 50px 30px;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .cta {
+        padding: 60px 50px;
+    }
+}
+/*---------------------------------------
+    Social List
+-----------------------------------------*/
+.social-list {
+    --gap: .5rem;
+}
+
+.social-list__icon {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-list__icon i, .social-list__icon span {
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    background: hsl(var(--base));
+    color: hsl(var(--white));
+}
+
+.social-list__icon i:hover, .social-list__icon span:hover {
+    box-shadow: 0 5px 15px 0 hsl(var(--dark)/0.3);
+}
+
+.social-list__icon [class*=facebook] {
+    background: #1877f2;
+    color: #fff;
+}
+
+.social-list__icon [class*=linkedin] {
+    background: #0077b5;
+    color: #fff;
+}
+
+.social-list__icon [class*=instagram] {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    color: #fff;
+}
+
+.social-list__icon [class*=twitter] {
+    background: #1da1f2;
+    color: #fff;
+}
+
+/*---------------------------------------
     0.3 Theme Style
 -----------------------------------------*/
 /*---------------------------------------
@@ -3815,13 +3875,33 @@ UI Section
     }
 }
 /*---------------------------------------
+CTA Section
+-----------------------------------------*/
+.cta-section {
+    position: relative;
+    isolation: isolate;
+}
+
+.cta-section::after {
+    content: "";
+    height: 120px;
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    background: hsl(var(--dark));
+    z-index: -1;
+}
+
+/*---------------------------------------
 Footer
 -----------------------------------------*/
 .footer {
-    background: hsl(var(--accent));
+    background: hsl(var(--dark));
 }
 
 .footer__copyright {
-    background: hsl(var(--accent));
+    background: hsl(var(--dark-600));
 }
 /*# sourceMappingURL=main.css.map */

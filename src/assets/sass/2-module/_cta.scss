@@ -1,0 +1,14 @@
+.cta {
+    padding: 30px 15px;
+    background-image: url(../images/cta-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include md-screen {
+        padding: 50px 30px;
+        border-radius: 15px;
+    }
+    @include xli-screen {
+        padding: 60px 50px;
+    }
+}

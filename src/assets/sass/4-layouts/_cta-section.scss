@@ -1,0 +1,15 @@
+.cta-section {
+    position: relative;
+    isolation: isolate;
+    &::after {
+        content: '';
+        height: 120px;
+        position: absolute;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        background: hsl(var(--dark));
+        z-index: -1;
+    }
+}
