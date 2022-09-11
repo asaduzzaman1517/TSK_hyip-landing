@@ -2767,6 +2767,78 @@ textarea.form--control:focus {
 }
 
 /*---------------------------------------
+    Demo Card
+-----------------------------------------*/
+.demo-card:hover .demo-card__body {
+    transform: translateY(-5px);
+}
+
+.demo-card:hover .demo-card__body::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+.demo-card:hover .demo-card__btn {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+    top: 50%;
+}
+
+.demo-card__body {
+    position: relative;
+    isolation: isolate;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.demo-card__body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: hsl(var(--dark)/0.5);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.demo-card__btn {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    background: hsl(var(--light));
+    border-radius: 2rem;
+    border: none;
+    z-index: 2;
+    transition: all 0.2s ease;
+}
+
+.demo-card__btn:hover {
+    background: hsl(var(--base));
+    color: hsl(var(--light));
+}
+
+.demo-card__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.demo-card__title {
+    display: block;
+    text-decoration: none;
+    color: hsl(var(--heading));
+    transition: all 0.3s ease;
+}
+
+.demo-card__title:hover {
+    color: hsl(var(--base));
+}
+
+/*---------------------------------------
     0.3 Theme Style
 -----------------------------------------*/
 /*---------------------------------------
@@ -3850,7 +3922,7 @@ Main Container
 .main-container {
     background-image: url(../images/main-bg.png);
     background-size: cover;
-    background-position: center top;
+    background-position: center;
     background-repeat: no-repeat;
 }
 

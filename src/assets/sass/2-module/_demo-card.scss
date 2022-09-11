@@ -1,0 +1,72 @@
+.demo-card {
+    &:hover {
+        .demo-card__body {
+            transform: translateY(-5px);
+
+            &::after {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .demo-card__btn {
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0.2s;
+            top: 50%;
+        }
+    }
+
+    &__body {
+        position: relative;
+        isolation: isolate;
+        transition: all .3s ease;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: hsl(var(--dark)/.5);
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        background: hsl(var(--light));
+        border-radius: 2rem;
+        border: none;
+        z-index: 2;
+        transition: all .2s ease;
+
+        &:hover {
+            background: hsl(var(--base));
+            color: hsl(var(--light));
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    &__title {
+        display: block;
+        text-decoration: none;
+        color: hsl(var(--heading));
+        transition: all .3s ease;
+
+        &:hover {
+            color: hsl(var(--base));
+        }
+    }
+}
