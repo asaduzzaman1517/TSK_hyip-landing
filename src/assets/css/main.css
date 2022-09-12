@@ -580,18 +580,25 @@ input[type=number] {
 
 @media screen and (min-width: 992px) {
     .primary-menu__link {
-        color: hsl(var(--white));
+        color: hsl(var(--white)/0.8);
         margin-left: 0;
         margin-right: 0;
         font-weight: 500;
         border-bottom: none;
         padding: 15px;
+        font-size: 16px;
     }
 }
 
 .primary-menu__link:hover {
     color: hsl(var(--base));
     text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+    .primary-menu__link:hover {
+        color: hsl(var(--white));
+    }
 }
 
 .primary-menu__link.active {
@@ -991,7 +998,7 @@ textarea.form--control:focus {
 }
 
 .btn--sm {
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .btn--md {
@@ -2785,6 +2792,13 @@ textarea.form--control:focus {
     top: 50%;
 }
 
+.demo-card:hover .demo-card__btn-group {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+    top: 50%;
+}
+
 .demo-card__body {
     position: relative;
     isolation: isolate;
@@ -2802,6 +2816,23 @@ textarea.form--control:focus {
     opacity: 0;
 }
 
+.demo-card__premium {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 1;
+    background: hsl(var(--light));
+    backdrop-filter: blur(2px);
+    color: hsl(var(--warning));
+}
+
 .demo-card__btn {
     position: absolute;
     top: 55%;
@@ -2813,12 +2844,53 @@ textarea.form--control:focus {
     border-radius: 2rem;
     border: none;
     z-index: 2;
+    font-size: 14px;
     transition: all 0.2s ease;
 }
 
 .demo-card__btn:hover {
     background: hsl(var(--base));
     color: hsl(var(--light));
+}
+
+.demo-card__premium-btn {
+    background: hsl(var(--light));
+    border-radius: 2rem;
+    border: none;
+    font-size: 14px;
+}
+
+.demo-card__premium-btn:hover {
+    background: hsl(var(--light));
+}
+
+.demo-card__premium-btn-alt {
+    background: hsl(var(--base));
+    color: hsl(var(--light));
+    border-radius: 2rem;
+    border: none;
+    font-size: 14px;
+}
+
+.demo-card__premium-btn-alt:hover {
+    background: hsl(var(--base));
+    color: hsl(var(--light));
+}
+
+.demo-card__btn-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease;
+    z-index: 1;
 }
 
 .demo-card__img {
@@ -3964,6 +4036,18 @@ CTA Section
     bottom: -1px;
     background: hsl(var(--dark));
     z-index: -1;
+}
+
+/*---------------------------------------
+FAQ Section
+-----------------------------------------*/
+.faq-section {
+    position: relative;
+    isolation: isolate;
+    background-image: url(../images/faq-bg.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /*---------------------------------------
